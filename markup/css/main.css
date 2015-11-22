@@ -1,0 +1,83 @@
+/* variables */
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  color: #000000;
+  font: 16px/1.2 Tahoma, Geneva, sans-serif;
+  height: 100%;
+}
+img {
+  border-style: none;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover {
+  text-decoration: underline;
+}
+input,
+textarea,
+select {
+  font: 16px/1.2 Tahoma, Geneva, sans-serif;
+  vertical-align: middle;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+*:focus {
+  outline: none;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+table {
+  border-collapse: collapse;
+  border: none;
+}
+td,
+th {
+  padding: 0;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+/* form */
+textarea {
+  border: none;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* wrapper */
+/* header */
+/* main */
+/* content */
+/* sidebar */
+/* footer */
