@@ -1,17 +1,27 @@
+/* PT Sans, PT Sans Narrow */
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow:700,400);
+/* import base */
 @import "base";
 /* variables */
 @main-font-size: 16px;
 @main-text-color: #000;
 @main-link-color: #fff;
+/* font-family */
+@pt-sans: 'PT Sans', sans-serif;
+@pt-sans-narrow: 'PT Sans Narrow', sans-serif;
+@pf-centro-slab: 'PF Centro Slab Pro', sans-serif;
+@pf-centro-slab-medium: 'PF Centro Slab Pro Medium', sans-serif;
 
 html {
     height: 100%;
+    background: url("../images/bg-body.png") repeat;
 }
 body {
     margin: 0;
     color: @main-text-color;
-    font: @main-font-size/1.2 Tahoma, Geneva, sans-serif;
+    font: @main-font-size/1.2 @pt-sans;
     height: 100%;
+    background: url("../images/bg-clouds.png") repeat-x 50% 0;
 }
 img {border-style: none;}
 a {
@@ -20,7 +30,7 @@ a {
 }
 a:hover {text-decoration:underline;}
 input, textarea, select {
-    font: @main-font-size/1.2 Tahoma, Geneva, sans-serif;
+    font: @main-font-size/1.2 @pt-sans;
     vertical-align: middle;
     color: @main-text-color;
     padding: 0;
@@ -68,7 +78,9 @@ textarea {
 :-ms-input-placeholder {}
 /* wrapper */
 #wrapper {
-
+    min-width: 480px;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 /* header */
 #header {
@@ -89,4 +101,6 @@ textarea {
 /* footer */
 #footer {
 
+}
+@media only screen and (max-width: 1023px) {
 }

@@ -1,12 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow:700,400);
+/* PT Sans, PT Sans Narrow */
+/* import base */
 /* variables */
+/* font-family */
 html {
   height: 100%;
+  background: url("../images/bg-body.png") repeat;
 }
 body {
   margin: 0;
   color: #000000;
-  font: 16px/1.2 Tahoma, Geneva, sans-serif;
+  font: 16px/1.2 'PT Sans', sans-serif;
   height: 100%;
+  background: url("../images/bg-clouds.png") repeat-x 50% 0;
 }
 img {
   border-style: none;
@@ -21,7 +27,7 @@ a:hover {
 input,
 textarea,
 select {
-  font: 16px/1.2 Tahoma, Geneva, sans-serif;
+  font: 16px/1.2 'PT Sans', sans-serif;
   vertical-align: middle;
   color: #000000;
   padding: 0;
@@ -76,6 +82,11 @@ textarea {
   box-sizing: border-box;
 }
 /* wrapper */
+#wrapper {
+  min-width: 480px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
 /* header */
 /* main */
 /* content */
