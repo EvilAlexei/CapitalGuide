@@ -84,7 +84,7 @@ textarea {
 /* wrapper */
 #wrapper {
   min-width: 480px;
-  max-width: 1024px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 /* header */
@@ -92,3 +92,9 @@ textarea {
 /* content */
 /* sidebar */
 /* footer */
+@media only screen and (min-width: 1400px) {
+  #wrapper {
+    padding: 0 200px;
+    max-width: 1600px;
+  }
+}
