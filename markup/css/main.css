@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow:700,400);
-/* PT Sans, PT Sans Narrow */
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|Open+Sans:400,600|PT+Sans+Narrow:400,700);
+/* PT Sans, Open Sans, PT Sans Narrow */
 /* import base */
 /* variables */
 /* font-family */
@@ -9,7 +9,7 @@ html {
 }
 body {
   margin: 0;
-  color: #000000;
+  color: #575757;
   font: 16px/1.2 'PT Sans', sans-serif;
   height: 100%;
   background: url("../images/bg-clouds.png") repeat-x 50% 0;
@@ -19,7 +19,7 @@ img {
 }
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #0082ac;
 }
 a:hover {
   text-decoration: underline;
@@ -29,7 +29,7 @@ textarea,
 select {
   font: 16px/1.2 'PT Sans', sans-serif;
   vertical-align: middle;
-  color: #000000;
+  color: #575757;
   padding: 0;
   margin: 0;
 }
@@ -81,6 +81,14 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.clear-fix:before,
+.clear-fix:after {
+  content: " ";
+  display: table;
+}
+.clear-fix:after {
+  clear: both;
+}
 /* wrapper */
 #wrapper {
   min-width: 480px;
@@ -88,10 +96,240 @@ textarea {
   margin: 0 auto;
 }
 /* header */
+#header:before,
+#header:after {
+  content: " ";
+  display: table;
+}
+#header:after {
+  clear: both;
+}
+#header:before,
+#header:after {
+  content: " ";
+  display: table;
+}
+#header:after {
+  clear: both;
+}
+#header .wrap:before,
+#header .wrap:after {
+  content: " ";
+  display: table;
+}
+#header .wrap:after {
+  clear: both;
+}
+#header .wrap:before,
+#header .wrap:after {
+  content: " ";
+  display: table;
+}
+#header .wrap:after {
+  clear: both;
+}
+#header .col {
+  float: left;
+  position: relative;
+  margin-left: 35px;
+}
+#header .col:first-child {
+  margin-left: 0;
+}
+#header .col h3 {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+}
+#header .col .header-list li {
+  padding: 3px 0;
+  line-height: 24px;
+}
+#header .col .header-list li a {
+  text-decoration: underline;
+  padding-left: 33px;
+  display: inline-block;
+}
+#header .col .header-list li a:hover {
+  text-decoration: none;
+}
+#header .col .header-list li a.email {
+  background: url("../images/icos/ico-mail.png") no-repeat 0 50%;
+  color: #cb0069;
+}
+#header .col .header-list li a.skype {
+  background: url("../images/icos/ico-skype.png") no-repeat 0 50%;
+}
+#header .logo {
+  background: url("../images/bg-logo.png") no-repeat;
+  width: 287px;
+  height: 74px;
+  text-indent: -9999px;
+  display: block;
+  cursor: pointer;
+  margin: 13px 0 0;
+}
+#header .logo a {
+  display: block;
+  height: 100%;
+}
+#header .services {
+  color: #0082ac;
+  text-decoration: underline;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
+#header .services:hover {
+  text-decoration: none;
+}
+#header .lang {
+  float: right;
+  margin-top: 17px;
+}
+#header .lang li {
+  float: left;
+  margin-left: 18px;
+}
+#header .lang li a {
+  display: block;
+  width: 35px;
+  height: 28px;
+  text-indent: -9999px;
+}
+#header .lang li a:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+#header .lang li a.ru {
+  background: url("../images/icos/ico-falg-ru.png") no-repeat 50% 50%;
+}
+#header .lang li a.en {
+  background: url("../images/icos/ico-falg-en.png") no-repeat 50% 50%;
+}
+#header .login-reg {
+  width: 220px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  float: right;
+  background: #0082ac;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  clear: right;
+  margin-top: 16px;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+#header .login-reg:hover {
+  background: #004860;
+}
+#nav {
+  margin-top: 16px;
+}
+#nav li {
+  float: left;
+  margin-right: 20px;
+}
+#nav li a {
+  border: 2px solid transparent;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 36px;
+  display: block;
+  font-size: 20px;
+  color: #000;
+  font-family: 'PF Centro Slab Pro Medium', sans-serif;
+  text-decoration: none;
+  -webkit-transition: border-color 0.3s linear;
+  -moz-transition: border-color 0.3s linear;
+  -o-transition: border-color 0.3s linear;
+  transition: border-color 0.3s linear;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#nav li a .ico-lock {
+  vertical-align: text-bottom;
+}
+#nav li a:hover,
+#nav li a.active {
+  border-color: #8a8a8a;
+}
+#nav li a.skam {
+  color: #f00;
+}
+/* icos */
+.ico-lock {
+  display: inline-block;
+  background: url("../images/icos/ico-lock.png") no-repeat;
+  width: 24px;
+  height: 24px;
+}
 /* main */
 /* content */
 /* sidebar */
 /* footer */
+#footer {
+  position: relative;
+  border-top: 1px solid #cecece;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 12px;
+}
+#footer:before,
+#footer:after {
+  content: " ";
+  display: table;
+}
+#footer:after {
+  clear: both;
+}
+#footer:before,
+#footer:after {
+  content: " ";
+  display: table;
+}
+#footer:after {
+  clear: both;
+}
+#footer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #fff;
+}
+#footer .footer-nav {
+  display: inline-block;
+}
+#footer .footer-nav li {
+  float: left;
+  margin: 0 32px;
+  font-family: 'PF Centro Slab Pro Medium', sans-serif;
+}
+#footer .footer-nav li a {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+#footer .footer-nav li a:hover,
+#footer .footer-nav li a.active {
+  color: #0082ac;
+}
+#footer .holder p {
+  line-height: 34px;
+}
 @media only screen and (min-width: 1400px) {
   #wrapper {
     padding: 0 200px;
