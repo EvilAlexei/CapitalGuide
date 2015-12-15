@@ -209,11 +209,14 @@ textarea {
 }
 #nav {
     margin-top: 16px;
-    //.clear-fix();
+    position: relative;
+    .clear-fix();
 
     li {
         float: left;
-        margin-right: 20px;
+        .box-sizing(border-box);
+        position: relative;
+        z-index: 2;
 
         a {
             border: 2px solid transparent;
@@ -232,15 +235,23 @@ textarea {
                 vertical-align: text-bottom;
             }
 
-            &:hover,
-            &.active {
-                border-color: #8a8a8a;
-            }
-
             &.skam {
                 color: #f00;
             }
         }
+    }
+    #marker {
+        position: absolute;
+        display: none;
+        border: 2px solid #8a8a8a;
+        bottom: 0;
+        height: 40px;
+        z-index: 1;
+        -webkit-transition:width @main-animation-duration, left @main-animation-duration;
+        -moz-transition:width @main-animation-duration, left @main-animation-duration;
+        -ms-transition:width @main-animation-duration, left @main-animation-duration;
+        -o-transition:width @main-animation-duration, left @main-animation-duration;
+        transition:width @main-animation-duration, left @main-animation-duration;
     }
 }
 /* icos */

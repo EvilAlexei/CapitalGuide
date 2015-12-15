@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css"/>
   <link rel="stylesheet" href="css/main.css" type="text/css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <!-- only jquery tooltip -->
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.main.js"></script>
   <title>CapitalGuide</title>
@@ -49,12 +48,13 @@
     </div>
     <nav id="nav">
       <ul>
-        <li><a href="index.html" class="active">Главная</a></li>
+        <li><a href="index.html" class="current">Главная</a></li>
         <li><a href="digest.html">Дайджест</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="articles.html">Статьи</a></li>
         <li><a href="skam.html" class="skam">СКАМ</a></li>
         <li><a href="chat.html">Чат <i class="ico-lock"></i></a></li>
+        <li id="marker"></li>
       </ul>
     </nav>
   </div>
@@ -227,11 +227,25 @@
             <option value="">2</option>
             <option value="">3</option>
           </select>
+          <!--<div class="filter-dropdown">
+            <p>Фильтр проектов</p>
+            <div class="dropdown">
+              <form action="#">
+                <fieldset>
+                  <label></label>
+                  <input type="text" id="input-low-01">
+                  <input type="text" id="input-high-01">
+                  <div id="slider-range-01"></div>
+                </fieldset>
+                <a href="#" class="submit">Показать</a>
+              </form>
+            </div>
+          </div>-->
         </li>
 
         <li>
           <h3><a href="#">Среднедоходные</a></h3>
-          <select name="mid-value">
+          <select name="high-value">
             <option value="">Фильтр проектов</option>
             <option value="">1</option>
             <option value="">2</option>
@@ -241,7 +255,7 @@
 
         <li>
           <h3><a href="#">Низкодоходные</a></h3>
-          <select name="low-value">
+          <select name="high-value">
             <option value="">Фильтр проектов</option>
             <option value="">1</option>
             <option value="">2</option>

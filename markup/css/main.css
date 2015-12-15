@@ -224,10 +224,31 @@ textarea {
 }
 #nav {
   margin-top: 16px;
+  position: relative;
+}
+#nav:before,
+#nav:after {
+  content: " ";
+  display: table;
+}
+#nav:after {
+  clear: both;
+}
+#nav:before,
+#nav:after {
+  content: " ";
+  display: table;
+}
+#nav:after {
+  clear: both;
 }
 #nav li {
   float: left;
-  margin-right: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
 }
 #nav li a {
   border: 2px solid transparent;
@@ -250,12 +271,21 @@ textarea {
 #nav li a .ico-lock {
   vertical-align: text-bottom;
 }
-#nav li a:hover,
-#nav li a.active {
-  border-color: #8a8a8a;
-}
 #nav li a.skam {
   color: #f00;
+}
+#nav #marker {
+  position: absolute;
+  display: none;
+  border: 2px solid #8a8a8a;
+  bottom: 0;
+  height: 40px;
+  z-index: 1;
+  -webkit-transition: width 0.3s, left 0.3s;
+  -moz-transition: width 0.3s, left 0.3s;
+  -ms-transition: width 0.3s, left 0.3s;
+  -o-transition: width 0.3s, left 0.3s;
+  transition: width 0.3s, left 0.3s;
 }
 /* icos */
 .ico-lock {
