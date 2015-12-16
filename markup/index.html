@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/font-face.css" type="text/css"/>
+  <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css"/>
   <link rel="stylesheet" href="css/main.css" type="text/css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="js/jquery.main.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/main.js"></script>
   <title>CapitalGuide</title>
 </head>
 <body>
@@ -46,12 +48,13 @@
     </div>
     <nav id="nav">
       <ul>
-        <li><a href="index.html" class="active">Главная</a></li>
+        <li><a href="index.html" class="current">Главная</a></li>
         <li><a href="digest.html">Дайджест</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="articles.html">Статьи</a></li>
         <li><a href="skam.html" class="skam">СКАМ</a></li>
         <li><a href="chat.html">Чат <i class="ico-lock"></i></a></li>
+        <li id="marker"></li>
       </ul>
     </nav>
   </div>
@@ -61,10 +64,10 @@
   <div id="main">
     <!--  begin main-holder -->
     <div class="main-holder">
-      <div class="sidebar-adds">
+      <div class="aside">
         <div class="wrap">
-          <h3>Лента новостей</h3>
-          <ul class="sidebar-list">
+          <h2>Лента новостей</h2>
+          <ul class="aside-list">
             <li><a href="#">Как управлять инвестиционным портфелем</a></li>
             <li><a href="#">Обзор 250 ADS (СКАМ)</a></li>
             <li><a href="#">МЛМ-игры</a></li>
@@ -73,57 +76,301 @@
           </ul>
         </div>
         <div class="wrap">
-          <h3>новые проекты</h3>
-          <ul class="sidebar-list">
-            <li><a href="#" class="proj-1">Poker Automatics</a></li>
-            <li><a href="#" class="proj-2">SocialFinanceCompany</a></li>
-            <li><a href="#" class="proj-3">Eastern Union</a></li>
-            <li><a href="#" class="proj-4">Grand Rialto Limited</a></li>
-            <li><a href="#" class="proj-5">MoneyBee</a></li>
+          <h2>новые проекты</h2>
+          <ul class="aside-list new-projects">
+            <li><a href="#"><i class="ico"><img src="images/icos/ico-proj-01.png" alt=""></i> Poker Automatics</a></li>
+            <li><a href="#"><i class="ico"><img src="images/icos/ico-proj-02.png" alt=""></i> SocialFinanceCompany</a></li>
+            <li><a href="#"><i class="ico"><img src="images/icos/ico-proj-03.png" alt=""></i> Eastern Union</a></li>
+            <li><a href="#"><i class="ico"><img src="images/icos/ico-proj-04.png" alt=""></i> Grand Rialto Limited</a></li>
+            <li><a href="#"><i class="ico"><img src="images/icos/ico-proj-05.png" alt=""></i> MoneyBee</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="mian-chat">
+      <div class="lite-chat">
         <div class="chat-holder">
-          <img src="images/img-chat.png" alt="">
+          <div class="chat">
+            <ul class="message-list">
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-avatar-01.png" alt="">
+                </div>
+                <div class="wrap">
+                  <div class="row">
+                    <h4><a href="#">Незнакомец</a></h4>
+                    <em class="time">12: 34</em>
+                    <a href="#" class="comments">3</a>
+                  </div>
+                  <p class="text">Всем привет в этом чате! Расскажите, куда лучше вложить деньги? А то накопил нириальную сумму,
+                    а что с ними делать не знаю.</p>
+                </div>
+              </li>
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-avatar-02.png" alt="">
+                </div>
+                <div class="wrap">
+                  <div class="row">
+                    <h4><a href="#">Мистер великолепный лис</a></h4>
+                    <em class="time">12: 34</em>
+                    <a href="#" class="comments">6</a>
+                  </div>
+                  <p class="text">Я не знаю. Я свои деньги под подушкой храню!</p>
+                </div>
+              </li>
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-avatar-03.png" alt="">
+                </div>
+                <div class="wrap">
+                  <div class="row">
+                    <h4><a href="#">Настена сластена</a></h4>
+                    <em class="time">12: 34</em>
+                    <a href="#" class="comments">8</a>
+                  </div>
+                  <p class="text">Я с вас прифигваю. Вы реально под подушкой деньги храните? Еще бы в МММ вложили бы!
+                    Я знаю один отличный сервис, платят 10% в день! Вот куда надо вкладывать!</p>
+                </div>
+              </li>
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-avatar-04.png" alt="">
+                </div>
+                <div class="wrap">
+                  <div class="row">
+                    <h4><a href="#">Я</a></h4>
+                    <em class="time">12: 34</em>
+                    <a href="#" class="comments">2</a>
+                  </div>
+                  <p class="text">Да я погляжу тут одни бизнес воротилы собрались! )))</p>
+                </div>
+              </li>
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-avatar-01.png" alt="">
+                </div>
+                <div class="wrap">
+                  <div class="row">
+                    <h4><a href="#">Незнакомец</a></h4>
+                    <em class="time">12: 34</em>
+                    <a href="#" class="comments">3</a>
+                  </div>
+                  <p class="text">Всем привет в этом чате! Расскажите, куда лучше вложить деньги? А то накопил нириальную сумму,
+                    а что с ними делать не знаю.</p>
+                </div>
+              </li>
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-avatar-02.png" alt="">
+                </div>
+                <div class="wrap">
+                  <div class="row">
+                    <h4><a href="#">Мистер великолепный лис</a></h4>
+                    <em class="time">12: 34</em>
+                    <a href="#" class="comments">6</a>
+                  </div>
+                  <p class="text">Я не знаю. Я свои деньги под подушкой храню!</p>
+                </div>
+              </li>
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-avatar-03.png" alt="">
+                </div>
+                <div class="wrap">
+                  <div class="row">
+                    <h4><a href="#">Настена сластена</a></h4>
+                    <em class="time">12: 34</em>
+                    <a href="#" class="comments">8</a>
+                  </div>
+                  <p class="text">Я с вас прифигваю. Вы реально под подушкой деньги храните? Еще бы в МММ вложили бы!
+                    Я знаю один отличный сервис, платят 10% в день! Вот куда надо вкладывать!</p>
+                </div>
+              </li>
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-avatar-04.png" alt="">
+                </div>
+                <div class="wrap">
+                  <div class="row">
+                    <h4><a href="#">Я</a></h4>
+                    <em class="time">12: 34</em>
+                    <a href="#" class="comments">2</a>
+                  </div>
+                  <p class="text">Да я погляжу тут одни бизнес воротилы собрались! )))</p>
+                </div>
+              </li>
+            </ul>
+            <form class="bottom-row" action="#">
+              <a href="#" class="submit">Отправить</a>
+              <div class="input-area">
+                <div class="message">
+                  Для того что бы писать в чат. <br> Вам нужно <a href="#">зарегистрироваться</a> или <a href="#">войти</a>.
+                </div>
+                <textarea name="chat-field" id="chat-field"></textarea>
+              </div>
+            </form>
+          </div>
         </div>
-        <a href="chat.html" class="full-ver-chat">Перейти в полную версию чата</a>
+        <a href="chat.html" class="full-chat" title="В полной версии чата вы можете прикреплять изображения и оставлять комментарии к записям">Перейти в полную версию чата</a>
       </div>
     </div>
     <!-- end main-holder -->
 
     <!-- begin projects -->
     <div class="projects">
+      <div class="filter-overlay"></div>
       <ul class="filters">
         <li>
-          <h2><a href="#">Высокодоходные</a></h2>
-          <select name="high-value">
-            <option value="">Фильтр проектов</option>
-            <option value="">1</option>
-            <option value="">2</option>
-            <option value="">3</option>
-          </select>
+          <h3><a href="#">Высокодоходные</a></h3>
+          <div class="filter-dropdown">
+            <p class="opener">Фильтр проектов</p>
+            <div class="dropdown">
+              <form action="#" id="high-value">
+                <fieldset>
+                  <label>Сумма инвестиций в рублях</label>
+                  <div class="row">
+                    <input type="text" class="input-01">
+                    <input type="text" class="input-02">
+                  </div>
+                  <div class="slider-range-01"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Количество дней в работе</label>
+                  <div class="row">
+                    <input type="text" class="input-03">
+                    <input type="text" class="input-04">
+                  </div>
+                  <div class="slider-range-02"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Процентная ставка</label>
+                  <div class="row">
+                    <input type="text" class="input-05">
+                    <input type="text" class="input-06">
+                  </div>
+                  <div class="slider-range-03"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Платежеспособность</label>
+                  <div class="row">
+                    <a href="#" class="btn-status green">Платит</a>
+                    <a href="#" class="btn-status blue">Не платит</a>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <label>Реферальный процент</label>
+                  <div class="row">
+                    <input type="text" class="input-07">
+                    <input type="text" class="input-08">
+                  </div>
+                  <div class="slider-range-04"></div>
+                </fieldset>
+                <a href="#" class="submit">Показать</a>
+              </form>
+            </div>
+          </div>
         </li>
 
         <li>
-          <h2><a href="#">Среднедоходные</a></h2>
-          <select name="mid-value">
-            <option value="">Фильтр проектов</option>
-            <option value="">1</option>
-            <option value="">2</option>
-            <option value="">3</option>
-          </select>
+          <h3><a href="#">Среднедоходные</a></h3>
+          <div class="filter-dropdown">
+            <p class="opener">Фильтр проектов</p>
+            <div class="dropdown">
+              <form action="#" id="mid-value">
+                <fieldset>
+                  <label>Сумма инвестиций в рублях</label>
+                  <div class="row">
+                    <input type="text" class="input-01">
+                    <input type="text" class="input-02">
+                  </div>
+                  <div class="slider-range-01"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Количество дней в работе</label>
+                  <div class="row">
+                    <input type="text" class="input-03">
+                    <input type="text" class="input-04">
+                  </div>
+                  <div class="slider-range-02"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Процентная ставка</label>
+                  <div class="row">
+                    <input type="text" class="input-05">
+                    <input type="text" class="input-06">
+                  </div>
+                  <div class="slider-range-03"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Платежеспособность</label>
+                  <div class="row">
+                    <a href="#" class="btn-status green">Платит</a>
+                    <a href="#" class="btn-status blue">Не платит</a>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <label>Реферальный процент</label>
+                  <div class="row">
+                    <input type="text" class="input-07">
+                    <input type="text" class="input-08">
+                  </div>
+                  <div class="slider-range-04"></div>
+                </fieldset>
+                <a href="#" class="submit">Показать</a>
+              </form>
+            </div>
+          </div>
         </li>
 
         <li>
-          <h2><a href="#">Низкодоходные</a></h2>
-          <select name="low-value">
-            <option value="">Фильтр проектов</option>
-            <option value="">1</option>
-            <option value="">2</option>
-            <option value="">3</option>
-          </select>
+          <h3><a href="#">Низкодоходные</a></h3>
+          <div class="filter-dropdown">
+            <p class="opener">Фильтр проектов</p>
+            <div class="dropdown">
+              <form action="#" id="low-value">
+                <fieldset>
+                  <label>Сумма инвестиций в рублях</label>
+                  <div class="row">
+                    <input type="text" class="input-01">
+                    <input type="text" class="input-02">
+                  </div>
+                  <div class="slider-range-01"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Количество дней в работе</label>
+                  <div class="row">
+                    <input type="text" class="input-03">
+                    <input type="text" class="input-04">
+                  </div>
+                  <div class="slider-range-02"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Процентная ставка</label>
+                  <div class="row">
+                    <input type="text" class="input-05">
+                    <input type="text" class="input-06">
+                  </div>
+                  <div class="slider-range-03"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Платежеспособность</label>
+                  <div class="row">
+                    <a href="#" class="btn-status green">Платит</a>
+                    <a href="#" class="btn-status blue">Не платит</a>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <label>Реферальный процент</label>
+                  <div class="row">
+                    <input type="text" class="input-07">
+                    <input type="text" class="input-08">
+                  </div>
+                  <div class="slider-range-04"></div>
+                </fieldset>
+                <a href="#" class="submit">Показать</a>
+              </form>
+            </div>
+          </div>
         </li>
       </ul>
 
@@ -132,7 +379,7 @@
           <ul class="proj-list">
 
             <li>
-              <h3></h3>
+              <h3>Poker Automatics</h3>
 
               <div class="row">
                 <span class="duration">67 дней</span>
@@ -141,7 +388,7 @@
 
               <div class="holder">
                 <div class="img-frame">
-                  <img src="img-preview-proj-01.png" alt="">
+                  <img src="images/img-preview-proj-01.png" alt="">
                 </div>
                 <div class="wrap">
                   <h4>Тарифные планы:</h4>
@@ -154,39 +401,172 @@
                     <li>0.75% в день на 5 месяцев</li>
                     <li>0.8%  в день на 6 месяцев </li>
                   </ul>
-
-                  <dl class="info">
-                    <dt>Наш вклад: </dt>
-                    <dd></dd>
-
-                    <dt>Минимальный вклад: </dt>
-                    <dd></dd>
-
-                    <dt>Максимальный вклад: </dt>
-                    <dd></dd>
-
-                    <dt>Реф. бонус: </dt>
-                    <dd></dd>
-
-                    <dt>Тип выплат:</dt>
-                    <dd></dd>
-
-                    <dt>Последняя выплата:</dt>
-                    <dd></dd>
-                  </dl>
-
-                  <div class="payment-systems">
-                    <h5>Платежные системы</h5>
-                    <ul class="payment-list">
-                      <li></li>
-                    </ul>
-                  </div>
-
-                  <div class="btn-row">
-                    <a href="#" class="goto-site">Перейти на сайт</a>
-                    <a href="#" class="more">Подробнее о проекте</a>
-                  </div>
                 </div>
+              </div>
+
+              <dl class="info">
+                <dt>Наш вклад: </dt>
+                <dd>150$</dd>
+
+                <dt>Минимальный вклад: </dt>
+                <dd>30$</dd>
+
+                <dt>Максимальный вклад: </dt>
+                <dd>∞$</dd>
+
+                <dt>Реф. бонус: </dt>
+                <dd>3%</dd>
+
+                <dt>Тип выплат:</dt>
+                <dd>Вручную</dd>
+
+                <dt>Последняя выплата:</dt>
+                <dd>12 000 р. <a href="#" class="calendar">calendar</a></dd>
+              </dl>
+
+              <div class="payment-systems">
+                <h5>Платежные системы</h5>
+                <ul class="payment-list">
+                  <li><img src="images/payments/img-payment-01.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-02.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-03.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-04.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-05.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-06.png" alt=""></li>
+                </ul>
+              </div>
+
+              <div class="btn-row">
+                <a href="#" class="goto-site">Перейти на сайт</a>
+                <a href="#" class="more">Подробнее о проекте</a>
+              </div>
+            </li>
+
+            <li>
+              <h3>Poker Automatics</h3>
+
+              <div class="row">
+                <span class="duration">67 дней</span>
+                <span class="status">Ожидание</span>
+              </div>
+
+              <div class="holder">
+                <div class="img-frame">
+                  <img src="images/img-preview-proj-01.png" alt="">
+                </div>
+                <div class="wrap">
+                  <h4>Тарифные планы:</h4>
+                  <ul class="rates">
+                    <li>0.4% в день на 1 месяц</li>
+                    <li>0.5%  в день на 1,5 месяца</li>
+                    <li>0.6% в день на 2 месяца</li>
+                    <li>0.65% в день на 3 месяца</li>
+                    <li>0.7% в день на 4 месяца</li>
+                    <li>0.75% в день на 5 месяцев</li>
+                    <li>0.8%  в день на 6 месяцев </li>
+                  </ul>
+                </div>
+              </div>
+
+              <dl class="info">
+                <dt>Наш вклад: </dt>
+                <dd>150$</dd>
+
+                <dt>Минимальный вклад: </dt>
+                <dd>30$</dd>
+
+                <dt>Максимальный вклад: </dt>
+                <dd>∞$</dd>
+
+                <dt>Реф. бонус: </dt>
+                <dd>3%</dd>
+
+                <dt>Тип выплат:</dt>
+                <dd>Вручную</dd>
+
+                <dt>Последняя выплата:</dt>
+                <dd>12 000 р. <a href="#" class="calendar">calendar</a></dd>
+              </dl>
+
+              <div class="payment-systems">
+                <h5>Платежные системы</h5>
+                <ul class="payment-list">
+                  <li><img src="images/payments/img-payment-01.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-02.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-03.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-04.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-05.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-06.png" alt=""></li>
+                </ul>
+              </div>
+
+              <div class="btn-row">
+                <a href="#" class="goto-site">Перейти на сайт</a>
+                <a href="#" class="more">Подробнее о проекте</a>
+              </div>
+            </li>
+
+            <li>
+              <h3>Poker Automatics</h3>
+
+              <div class="row">
+                <span class="duration">67 дней</span>
+                <span class="status">Ожидание</span>
+              </div>
+
+              <div class="holder">
+                <div class="img-frame">
+                  <img src="images/img-preview-proj-01.png" alt="">
+                </div>
+                <div class="wrap">
+                  <h4>Тарифные планы:</h4>
+                  <ul class="rates">
+                    <li>0.4% в день на 1 месяц</li>
+                    <li>0.5%  в день на 1,5 месяца</li>
+                    <li>0.6% в день на 2 месяца</li>
+                    <li>0.65% в день на 3 месяца</li>
+                    <li>0.7% в день на 4 месяца</li>
+                    <li>0.75% в день на 5 месяцев</li>
+                    <li>0.8%  в день на 6 месяцев </li>
+                  </ul>
+                </div>
+              </div>
+
+              <dl class="info">
+                <dt>Наш вклад: </dt>
+                <dd>150$</dd>
+
+                <dt>Минимальный вклад: </dt>
+                <dd>30$</dd>
+
+                <dt>Максимальный вклад: </dt>
+                <dd>∞$</dd>
+
+                <dt>Реф. бонус: </dt>
+                <dd>3%</dd>
+
+                <dt>Тип выплат:</dt>
+                <dd>Вручную</dd>
+
+                <dt>Последняя выплата:</dt>
+                <dd>12 000 р. <a href="#" class="calendar">calendar</a></dd>
+              </dl>
+
+              <div class="payment-systems">
+                <h5>Платежные системы</h5>
+                <ul class="payment-list">
+                  <li><img src="images/payments/img-payment-01.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-02.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-03.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-04.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-05.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-06.png" alt=""></li>
+                </ul>
+              </div>
+
+              <div class="btn-row">
+                <a href="#" class="goto-site">Перейти на сайт</a>
+                <a href="#" class="more">Подробнее о проекте</a>
               </div>
             </li>
 
@@ -196,113 +576,369 @@
           <ul class="proj-list">
 
             <li>
-              <h3></h3>
+              <h3>SocialFinanceCompany</h3>
 
               <div class="row">
-                <span class="duration"></span>
-                <span class="status"></span>
+                <span class="duration">203 дня</span>
+                <span class="status green">Платит</span>
               </div>
 
               <div class="holder">
                 <div class="img-frame">
-                  <img src="img-preview-proj-02.png" alt="">
+                  <img src="images/img-preview-proj-02.png" alt="">
                 </div>
                 <div class="wrap">
                   <h4>Тарифные планы:</h4>
                   <ul class="rates">
-                    <li></li>
+                    <li>0.7% в день на 30 дней</li>
+                    <li>0.85% в день на 60 дней</li>
+                    <li>1% в день на 90 дней</li>
                   </ul>
-
-                  <dl class="info">
-                    <dt>Наш вклад: </dt>
-                    <dd></dd>
-
-                    <dt>Минимальный вклад: </dt>
-                    <dd></dd>
-
-                    <dt>Максимальный вклад: </dt>
-                    <dd></dd>
-
-                    <dt>Реф. бонус: </dt>
-                    <dd></dd>
-
-                    <dt>Тип выплат:</dt>
-                    <dd></dd>
-
-                    <dt>Последняя выплата:</dt>
-                    <dd></dd>
-                  </dl>
-
-                  <div class="payment-systems">
-                    <h5>Платежные системы</h5>
-                    <ul class="payment-list">
-                      <li></li>
-                    </ul>
-                  </div>
-
-                  <div class="btn-row">
-                    <a href="#" class="goto-site">Перейти на сайт</a>
-                    <a href="#" class="more">Подробнее о проекте</a>
-                  </div>
                 </div>
+              </div>
+
+              <dl class="info">
+                <dt>Наш вклад: </dt>
+                <dd>70$</dd>
+
+                <dt>Минимальный вклад: </dt>
+                <dd>2000 руб. | 30$</dd>
+
+                <dt>Максимальный вклад: </dt>
+                <dd>350000 руб.  | 7000$</dd>
+
+                <dt>Реф. бонус: </dt>
+                <dd>3%</dd>
+
+                <dt>Тип выплат:</dt>
+                <dd>Вручную</dd>
+
+                <dt>Последняя выплата:</dt>
+                <dd>156 р. <a href="#" class="calendar">calendar</a></dd>
+              </dl>
+
+              <div class="payment-systems">
+                <h5>Платежные системы</h5>
+                <ul class="payment-list">
+                  <li><img src="images/payments/img-payment-01.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-02.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-03.png" alt=""></li>
+                </ul>
+              </div>
+
+              <div class="btn-row">
+                <a href="#" class="goto-site">Перейти на сайт</a>
+                <a href="#" class="more">Подробнее о проекте</a>
+              </div>
+            </li>
+
+            <li>
+              <h3>SocialFinanceCompany</h3>
+
+              <div class="row">
+                <span class="duration">203 дня</span>
+                <span class="status green">Платит</span>
+              </div>
+
+              <div class="holder">
+                <div class="img-frame">
+                  <img src="images/img-preview-proj-02.png" alt="">
+                </div>
+                <div class="wrap">
+                  <h4>Тарифные планы:</h4>
+                  <ul class="rates">
+                    <li>0.7% в день на 30 дней</li>
+                    <li>0.85% в день на 60 дней</li>
+                    <li>1% в день на 90 дней</li>
+                  </ul>
+                </div>
+              </div>
+
+              <dl class="info">
+                <dt>Наш вклад: </dt>
+                <dd>70$</dd>
+
+                <dt>Минимальный вклад: </dt>
+                <dd>2000 руб. | 30$</dd>
+
+                <dt>Максимальный вклад: </dt>
+                <dd>350000 руб.  | 7000$</dd>
+
+                <dt>Реф. бонус: </dt>
+                <dd>3%</dd>
+
+                <dt>Тип выплат:</dt>
+                <dd>Вручную</dd>
+
+                <dt>Последняя выплата:</dt>
+                <dd>156 р. <a href="#" class="calendar">calendar</a></dd>
+              </dl>
+
+              <div class="payment-systems">
+                <h5>Платежные системы</h5>
+                <ul class="payment-list">
+                  <li><img src="images/payments/img-payment-01.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-02.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-03.png" alt=""></li>
+                </ul>
+              </div>
+
+              <div class="btn-row">
+                <a href="#" class="goto-site">Перейти на сайт</a>
+                <a href="#" class="more">Подробнее о проекте</a>
+              </div>
+            </li>
+
+            <li>
+              <h3>SocialFinanceCompany</h3>
+
+              <div class="row">
+                <span class="duration">203 дня</span>
+                <span class="status green">Платит</span>
+              </div>
+
+              <div class="holder">
+                <div class="img-frame">
+                  <img src="images/img-preview-proj-02.png" alt="">
+                </div>
+                <div class="wrap">
+                  <h4>Тарифные планы:</h4>
+                  <ul class="rates">
+                    <li>0.7% в день на 30 дней</li>
+                    <li>0.85% в день на 60 дней</li>
+                    <li>1% в день на 90 дней</li>
+                  </ul>
+                </div>
+              </div>
+
+              <dl class="info">
+                <dt>Наш вклад: </dt>
+                <dd>70$</dd>
+
+                <dt>Минимальный вклад: </dt>
+                <dd>2000 руб. | 30$</dd>
+
+                <dt>Максимальный вклад: </dt>
+                <dd>350000 руб.  | 7000$</dd>
+
+                <dt>Реф. бонус: </dt>
+                <dd>3%</dd>
+
+                <dt>Тип выплат:</dt>
+                <dd>Вручную</dd>
+
+                <dt>Последняя выплата:</dt>
+                <dd>156 р. <a href="#" class="calendar">calendar</a></dd>
+              </dl>
+
+              <div class="payment-systems">
+                <h5>Платежные системы</h5>
+                <ul class="payment-list">
+                  <li><img src="images/payments/img-payment-01.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-02.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-03.png" alt=""></li>
+                </ul>
+              </div>
+
+              <div class="btn-row">
+                <a href="#" class="goto-site">Перейти на сайт</a>
+                <a href="#" class="more">Подробнее о проекте</a>
               </div>
             </li>
 
           </ul>
         </li>
         <li class="low">
-
           <ul class="proj-list">
             <li>
-              <h3></h3>
+              <h3>Eastern Union</h3>
 
               <div class="row">
-                <span class="duration"></span>
-                <span class="status"></span>
+                <span class="duration">95 дней</span>
+                <span class="status red">Не платит</span>
               </div>
 
               <div class="holder">
                 <div class="img-frame">
-                  <img src="img-preview-proj-03.png" alt="">
+                  <img src="images/img-preview-proj-03.png" alt="">
                 </div>
                 <div class="wrap">
                   <h4>Тарифные планы:</h4>
                   <ul class="rates">
-                    <li></li>
+                    <li>0.4% в день на 1 месяц</li>
+                    <li>0.5%  в день на 1,5 месяца</li>
+                    <li>0.6% в день на 2 месяца</li>
+                    <li>0.65% в день на 3 месяца</li>
+                    <li>0.7% в день на 4 месяца</li>
                   </ul>
-
-                  <dl class="info">
-                    <dt>Наш вклад: </dt>
-                    <dd></dd>
-
-                    <dt>Минимальный вклад: </dt>
-                    <dd></dd>
-
-                    <dt>Максимальный вклад: </dt>
-                    <dd></dd>
-
-                    <dt>Реф. бонус: </dt>
-                    <dd></dd>
-
-                    <dt>Тип выплат:</dt>
-                    <dd></dd>
-
-                    <dt>Последняя выплата:</dt>
-                    <dd></dd>
-                  </dl>
-
-                  <div class="payment-systems">
-                    <h5>Платежные системы</h5>
-                    <ul class="payment-list">
-                      <li></li>
-                    </ul>
-                  </div>
-
-                  <div class="btn-row">
-                    <a href="#" class="goto-site">Перейти на сайт</a>
-                    <a href="#" class="more">Подробнее о проекте</a>
-                  </div>
                 </div>
+              </div>
+
+              <dl class="info">
+                <dt>Наш вклад: </dt>
+                <dd>200$</dd>
+
+                <dt>Минимальный вклад: </dt>
+                <dd>30$</dd>
+
+                <dt>Максимальный вклад: </dt>
+                <dd>∞$</dd>
+
+                <dt>Реф. бонус: </dt>
+                <dd>5 -15%</dd>
+
+                <dt>Тип выплат:</dt>
+                <dd>Вручную</dd>
+
+                <dt>Последняя выплата:</dt>
+                <dd>4 568 р. <a href="#" class="calendar">calendar</a></dd>
+              </dl>
+
+              <div class="payment-systems">
+                <h5>Платежные системы</h5>
+                <ul class="payment-list">
+                  <li><img src="images/payments/img-payment-01.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-02.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-03.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-04.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-05.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-06.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-07.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-08.png" alt=""></li>
+                </ul>
+              </div>
+
+              <div class="btn-row">
+                <a href="#" class="goto-site">Перейти на сайт</a>
+                <a href="#" class="more">Подробнее о проекте</a>
+              </div>
+            </li>
+
+            <li>
+              <h3>Eastern Union</h3>
+
+              <div class="row">
+                <span class="duration">95 дней</span>
+                <span class="status red">Не платит</span>
+              </div>
+
+              <div class="holder">
+                <div class="img-frame">
+                  <img src="images/img-preview-proj-03.png" alt="">
+                </div>
+                <div class="wrap">
+                  <h4>Тарифные планы:</h4>
+                  <ul class="rates">
+                    <li>0.4% в день на 1 месяц</li>
+                    <li>0.5%  в день на 1,5 месяца</li>
+                    <li>0.6% в день на 2 месяца</li>
+                    <li>0.65% в день на 3 месяца</li>
+                    <li>0.7% в день на 4 месяца</li>
+                  </ul>
+                </div>
+              </div>
+
+              <dl class="info">
+                <dt>Наш вклад: </dt>
+                <dd>200$</dd>
+
+                <dt>Минимальный вклад: </dt>
+                <dd>30$</dd>
+
+                <dt>Максимальный вклад: </dt>
+                <dd>∞$</dd>
+
+                <dt>Реф. бонус: </dt>
+                <dd>5 -15%</dd>
+
+                <dt>Тип выплат:</dt>
+                <dd>Вручную</dd>
+
+                <dt>Последняя выплата:</dt>
+                <dd>4 568 р. <a href="#" class="calendar">calendar</a></dd>
+              </dl>
+
+              <div class="payment-systems">
+                <h5>Платежные системы</h5>
+                <ul class="payment-list">
+                  <li><img src="images/payments/img-payment-01.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-02.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-03.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-04.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-05.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-06.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-07.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-08.png" alt=""></li>
+                </ul>
+              </div>
+
+              <div class="btn-row">
+                <a href="#" class="goto-site">Перейти на сайт</a>
+                <a href="#" class="more">Подробнее о проекте</a>
+              </div>
+            </li>
+
+            <li>
+              <h3>Eastern Union</h3>
+
+              <div class="row">
+                <span class="duration">95 дней</span>
+                <span class="status red">Не платит</span>
+              </div>
+
+              <div class="holder">
+                <div class="img-frame">
+                  <img src="images/img-preview-proj-03.png" alt="">
+                </div>
+                <div class="wrap">
+                  <h4>Тарифные планы:</h4>
+                  <ul class="rates">
+                    <li>0.4% в день на 1 месяц</li>
+                    <li>0.5%  в день на 1,5 месяца</li>
+                    <li>0.6% в день на 2 месяца</li>
+                    <li>0.65% в день на 3 месяца</li>
+                    <li>0.7% в день на 4 месяца</li>
+                  </ul>
+                </div>
+              </div>
+
+              <dl class="info">
+                <dt>Наш вклад: </dt>
+                <dd>200$</dd>
+
+                <dt>Минимальный вклад: </dt>
+                <dd>30$</dd>
+
+                <dt>Максимальный вклад: </dt>
+                <dd>∞$</dd>
+
+                <dt>Реф. бонус: </dt>
+                <dd>5 -15%</dd>
+
+                <dt>Тип выплат:</dt>
+                <dd>Вручную</dd>
+
+                <dt>Последняя выплата:</dt>
+                <dd>4 568 р. <a href="#" class="calendar">calendar</a></dd>
+              </dl>
+
+              <div class="payment-systems">
+                <h5>Платежные системы</h5>
+                <ul class="payment-list">
+                  <li><img src="images/payments/img-payment-01.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-02.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-03.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-04.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-05.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-06.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-07.png" alt=""></li>
+                  <li><img src="images/payments/img-payment-08.png" alt=""></li>
+                </ul>
+              </div>
+
+              <div class="btn-row">
+                <a href="#" class="goto-site">Перейти на сайт</a>
+                <a href="#" class="more">Подробнее о проекте</a>
               </div>
             </li>
 

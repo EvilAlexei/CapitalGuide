@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/font-face.css" type="text/css"/>
+  <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css"/>
   <link rel="stylesheet" href="css/main.css" type="text/css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="js/jquery.main.js"></script>
-  <title>CapitalGuide</title>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>CapitalGuide | Add</title>
 </head>
 <body>
 <!-- BEGIN WRAPPER -->
@@ -46,7 +48,7 @@
     </div>
     <nav id="nav">
       <ul>
-        <li><a href="index.html" class="active">Главная</a></li>
+        <li><a href="index.html">Главная</a></li>
         <li><a href="digest.html">Дайджест</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="articles.html">Статьи</a></li>
@@ -59,7 +61,115 @@
 
   <!-- BEGIN MAIN -->
   <div id="main">
+    <!-- BEGIN SIDEBAR -->
+    <div id="sidebar">
+      <div class="advantages">
+        <h2>Приемущества</h2>
+        <ul class="advantages">
+          <li>
+            <img src="images/img-advantages-01.png" alt=""/>
+            <h3>Мобильная версия сайта</h3>
+          </li>
+          <li>
+            <img src="images/img-advantages-02.png" alt=""/>
+            <h3>Оповещение на сайт</h3>
+          </li>
+          <li>
+            <img src="images/img-advantages-03.png" alt=""/>
+            <h3>Посты выплат на основных форумах</h3>
+          </li>
+          <li>
+            <img src="images/img-advantages-04.png" alt=""/>
+            <h3>Приложение для ПК</h3>
+            <p>Моментальное оповещение пользователей о появлении новых проектов, выплатах, изменении статусов и о
+              новостях проектов.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- END SIDEBAR -->
 
+     <!-- BEGIN CONTENT -->
+    <div id="content">
+      <h2>Наши услуги</h2>
+
+      <ul class="breadcrumbs">
+        <li><a href="#">Главная</a></li>
+        <li>Наши услуги</li>
+      </ul>
+
+      <div class="services">
+        <p class="text">Чтобы разместить свой проэкт на сайте Кэпитал Гайд вам необходимо заполнить все поля в
+          анкете на добовление,после чего с вами свяжется админестрация сайта</p>
+
+        <form action="#" class="form">
+          <div class="row">
+            <div class="col">
+              <label for="proj-link">Ссылка на проэкт</label>
+              <input type="text" id="proj-link">
+            </div>
+            <div class="col">
+              <label for="contact-email">Контактный емайл (для связи с админом проэкта)</label>
+              <input type="text" id="contact-email">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="messenger">Skype или ICQ (Номер и тип мессенджера)</label>
+              <input type="text" id="messenger">
+            </div>
+            <div class="col">
+              <label for="">Вид проекта</label>
+              <select name="proj-type" id="">
+                <option value="">Низкодоходный до 15% в мес</option>
+                <option value="">Среднедоходный до 30% в мес</option>
+                <option value="">Высокодоходный до 45% в мес</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="min-депозит">Минимальный вклад</label>
+              <input type="text" id="min-депозит">
+            </div>
+            <div class="col">
+              <label for="max-депозит">Максимальный вклад</label>
+              <input type="text" id="max-депозит">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="paymanet-type">Тип выплат</label>
+              <input type="text" id="paymanet-type">
+            </div>
+            <div class="col">
+              <label for="refferal-program">Реферальная программа %</label>
+              <input type="text" id="refferal-program">
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="payment-systems">Платёжные системы (перечислите через запятую)</label>
+            <input type="text" id="payment-systems">
+          </div>
+
+          <div class="row">
+            <label for="proj-details">Опишите детали проэкта,тарифные планы,ньюансы,примечания и т.д Всё что по вашему мы должны
+              знать о проэкте.</label>
+            <textarea name="" id="proj-details"></textarea>
+          </div>
+
+          <a href="#" class="submit">Отправить</a>
+        </form>
+
+        <p class="text">Место на сайте в списке проэктов зависит от суммы открытого вклада. От большего к меньшему.
+          Своё место по сумме проэкт занимает сразу после первой выплаты.</p>
+      </div>
+    </div>
+    <!-- END CONTENT -->
   </div>
   <!-- END MAIN -->
 
