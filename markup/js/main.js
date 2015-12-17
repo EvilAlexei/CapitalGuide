@@ -5,11 +5,13 @@ $(function(){
   });
 
   /* nav hover effect */
-  navHover({
-    holder: '#nav',
-    marker: '#marker',
-    current: '.current'
-  });
+  setTimeout(function(){  // setTimeout because of not safe webfonts
+    navHover({
+      holder: '#nav',
+      marker: '#marker',
+      current: '.current'
+    });
+  }, 5);
 
   /* filter dropdown */
   $('.filter-dropdown .opener').click(function(){
