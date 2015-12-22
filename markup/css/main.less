@@ -1111,6 +1111,93 @@ select {
         }
     }
 }
+/* .articles */
+.articles {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+
+    .holder {
+        width: 48%;
+        height: 420px;
+        background: #fff;
+        border-radius: 3px;
+        margin: 20px 0;
+        padding: 0 17px;
+        overflow: hidden;
+        position: relative;
+        .box-sizing(border-box);
+
+        &:hover {
+            .box-shadow(0 0 15px 0 #808080);
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 100%);
+            background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#ffffff',GradientType=0 );
+        }
+
+        .img-frame {
+            height: 210px;
+            line-height: 210px;
+            text-align: center;
+
+            img {
+                vertical-align: middle;
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+
+        h3 {
+            margin-top: 6px;
+            font: 500 25px/1.2 @pf-centro-slab-medium;
+            color: @main-link-color;
+        }
+
+        p {
+            margin-top: 5px;
+            font-size: 17px;
+            line-height: 1.4;
+        }
+    }
+}
+/* faq */
+.faq-list {
+    li {
+        padding: 14px 0;
+
+        h4 {
+            cursor: pointer;
+            color: @main-link-color;
+            border-bottom: 2px dashed @main-link-color;
+            font: 500 25px/1.2 @pf-centro-slab-medium;
+            display: inline-block;
+
+            &:hover {
+                border-bottom-color: transparent;
+            }
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .holder {
+            display: none;
+            margin: 14px 0 -14px;
+        }
+    }
+}
 /* media query */
 @media only screen and (min-width: 1000px) and (max-width: 1420px) {  /* 1420 and not 1400 because of scrollbar */
     #wrapper {

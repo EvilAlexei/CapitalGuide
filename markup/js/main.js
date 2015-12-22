@@ -34,6 +34,22 @@ $(function(){
   jqueryUISlider({parent: '#low-value', slider: ".slider-range-02", input01: ".input-03", input02: ".input-04"}, {range: true, min: 0, max: 90, values: [1, 56]});
   jqueryUISlider({parent: '#low-value', slider: ".slider-range-03", input01: ".input-05", input02: ".input-06"}, {range: true, min: 0, max: 20, values: [0, 10]});
   jqueryUISlider({parent: '#low-value', slider: ".slider-range-04", input01: ".input-07", input02: ".input-08"}, {range: true, min: 0, max: 20, values: [0, 10]});
+
+  /* faq-list */
+  $('h4', '.faq-list').click(function(){
+    var parent = $(this).parents('.faq-list');
+    var parentLi = $(this).parent();
+
+    if (!parentLi.hasClass('active')){
+      $('> li', parent).removeClass('active');
+      $('.holder', parent).slideUp();
+      parentLi.addClass('active');
+      $('.holder', '.active').slideDown();
+    } else {
+      $('.holder', '.active').slideUp();
+      $('> li', parent).removeClass('active');
+    }
+  })
 });
 
 function navHover(options){
