@@ -49,7 +49,7 @@ $(function(){
       $('.holder', '.active').slideUp();
       $('> li', parent).removeClass('active');
     }
-  })
+  });
 });
 
 function navHover(options){
@@ -80,5 +80,4 @@ function jqueryUISlider(selectors, sliderOptions) {
   $(input02, parent).keyup(function(){
     $(slider, parent).slider("values", 1, $(this).val());
   });
-
 }

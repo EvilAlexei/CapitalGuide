@@ -817,7 +817,6 @@ select {
   right: 9px;
 }
 .projects .proj-list > li .btn-row a {
-  display: inline-block;
   padding: 0 12px;
   height: 30px;
   font: bold 16px/30px 'PT Sans Narrow', sans-serif;
@@ -940,6 +939,7 @@ select {
 .projects .proj-list > li .payment-systems h5 {
   font-weight: normal;
   color: #000000;
+  font-size: 16px;
 }
 .projects .proj-list > li .payment-systems li {
   float: left;
@@ -1047,6 +1047,7 @@ select {
   font-size: 18px;
   padding: 20px 0;
 }
+/* form */
 .form {
   overflow: hidden;
 }
@@ -1095,6 +1096,322 @@ select {
 }
 .form .submit:hover {
   background: #557900;
+}
+/* full-project */
+.full-project {
+  position: relative;
+}
+.full-project h3 {
+  font: bold 22px/1.2 'PT Sans', sans-serif;
+  color: #0e6e9a;
+  display: inline-block;
+  height: 46px;
+  padding: 6px 45px 14px 0;
+  margin-bottom: -14px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.full-project.high h3 {
+  background: url("../images/icos/ico-value-high.png") no-repeat 100% 50%;
+}
+.full-project.mid h3 {
+  background: url("../images/icos/ico-value-mid.png") no-repeat 100% 50%;
+}
+.full-project.low h3 {
+  background: url("../images/icos/ico-value-low.png") no-repeat 100% 50%;
+}
+.full-project .row {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0 15px;
+}
+.full-project .row > span {
+  height: 25px;
+  line-height: 25px;
+  padding: 0 12px;
+  border-radius: 4px;
+  float: left;
+  font-size: 14px;
+}
+.full-project .row .duration {
+  margin-right: 12px;
+  color: #000000;
+  background: #e4e4e4;
+}
+.full-project .row .status {
+  background: #0e6e9a;
+  color: #fff;
+}
+.full-project .row .status.green {
+  background: #7b9a0e;
+}
+.full-project .row .status.red {
+  background: #9a0e0e;
+}
+.full-project .holder {
+  overflow: hidden;
+}
+.full-project .holder .img-frame {
+  float: left;
+  margin-right: 16px;
+}
+.full-project .holder .wrap {
+  float: left;
+}
+.full-project .holder .wrap h4 {
+  font-size: 18px;
+  line-height: 1;
+  color: #000000;
+}
+.full-project .holder .wrap .rates {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #000000;
+}
+.full-project .holder .wrap .rates li {
+  margin-top: 4px;
+}
+.full-project .info {
+  margin: 10px 0 0;
+  color: #000000;
+}
+.full-project .info:before,
+.full-project .info:after {
+  content: " ";
+  display: table;
+}
+.full-project .info:after {
+  clear: both;
+}
+.full-project .info:before,
+.full-project .info:after {
+  content: " ";
+  display: table;
+}
+.full-project .info:after {
+  clear: both;
+}
+.full-project .info dt {
+  font-weight: bold;
+  width: 165px;
+  float: left;
+  clear: left;
+  margin: 1.5px 0;
+}
+.full-project .info dd {
+  float: left;
+  margin: 1.5px 0;
+}
+.full-project .info .calendar {
+  display: inline-block;
+  background: url("../images/icos/ico-calendar.png") no-repeat;
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+}
+.full-project .payment-systems {
+  margin-top: 3px;
+}
+.full-project .payment-systems h5 {
+  font-weight: normal;
+  color: #000000;
+  font-size: 16px;
+}
+.full-project .payment-systems .payment-list {
+  overflow: hidden;
+  width: 250px;
+}
+.full-project .payment-systems .payment-list li {
+  float: left;
+  margin: 5px 10px 0 0;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+  border-radius: 4px;
+  height: 25px;
+  width: 70px;
+  text-align: center;
+  vertical-align: middle;
+}
+.full-project .btn-row {
+  margin-top: 17px;
+  clear: both;
+  overflow: hidden;
+}
+.full-project .btn-row a {
+  float: left;
+  padding: 0 12px;
+  height: 30px;
+  font: bold 16px/30px 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.full-project .btn-row .goto-site {
+  background: #7b9a0e;
+  margin-right: 10px;
+}
+.full-project .btn-row .goto-site:hover {
+  background: #566b0a;
+}
+.full-project .btn-row .complain {
+  background: #a81430;
+}
+.full-project .btn-row .complain:hover {
+  background: #7a0f23;
+}
+.full-project .p-block {
+  margin-top: 20px;
+  border-top: 1px solid #777;
+}
+.full-project .p-block:before,
+.full-project .p-block:after {
+  content: " ";
+  display: table;
+}
+.full-project .p-block:after {
+  clear: both;
+}
+.full-project .p-block:before,
+.full-project .p-block:after {
+  content: " ";
+  display: table;
+}
+.full-project .p-block:after {
+  clear: both;
+}
+.full-project .p-block h4 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+.full-project .description p {
+  padding: 15px 0;
+}
+.full-project .video-holder {
+  display: inline-block;
+  padding-bottom: 25px;
+  background: url("../images/bg-video-shadow.png") no-repeat 0 100%;
+  background-size: 100% auto;
+}
+.full-project .comments .comment {
+  margin-top: 10px;
+  background: #fff;
+  padding: 10px;
+  min-width: 120px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.full-project .comments .comment .top-bar {
+  overflow: hidden;
+}
+.full-project .comments .comment .top-bar .name {
+  font-weight: bold;
+  color: #a81430;
+  float: left;
+  margin-right: 5px;
+}
+.full-project .comments .comment .top-bar .name a {
+  text-decoration: none;
+  color: inherit;
+}
+.full-project .comments .comment .top-bar .name a:hover {
+  text-decoration: underline;
+}
+.full-project .comments .comment .top-bar .date {
+  font-size: 14px;
+  color: #868686;
+  font-style: normal;
+}
+.full-project .comments .comment h5,
+.full-project .comments .comment p {
+  color: #000;
+  font-size: 14px;
+  margin-top: 3px;
+}
+.full-project .comments .comment p {
+  line-height: 1.4;
+}
+.full-project .c-paging {
+  margin-top: 20px;
+  text-align: center;
+}
+.full-project .c-paging ul {
+  display: inline-block;
+}
+.full-project .c-paging ul li {
+  float: left;
+  margin: 0 4px;
+}
+.full-project .c-paging ul li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.full-project .c-paging ul li a:hover {
+  background: #008ead;
+  color: #fff;
+}
+.full-project .c-paging ul li a.active {
+  background: #008ead;
+  color: #fff;
+}
+.full-project .c-paging ul li a.active:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -7px;
+  border: 7px solid transparent;
+  border-bottom-color: #008ead;
+}
+.full-project textarea {
+  height: 140px;
+  border: 5px solid #d7d7d7;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.full-project .send {
+  float: right;
+  margin-top: 10px;
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  background: #7b9a0e;
+  border-radius: 3px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.full-project .send:hover {
+  background: #303c06;
 }
 /* skam-list */
 .skam-list {
@@ -1151,6 +1468,9 @@ select {
 }
 #sidebar:after {
   clear: both;
+}
+#sidebar .aside {
+  width: 100%;
 }
 .advantages {
   float: right;
