@@ -9,11 +9,16 @@
 @main-link-color: #0082ac;
 @main-animation-duration: 0.3s;
 
-@dark-blue: #0e6e9a;
-@dark-green: #7b9a0e;
+@white: #fff;
+@gray: #c4c4c4;
 @green: #79ac00;
 @red: #a81430;
+
+@dark-gray: #7a7a7a;
+@dark-blue: #0e6e9a;
+@dark-green: #7b9a0e;
 @dark-red: #9a0e0e;
+
 /* font-family */
 @pt-sans: 'PT Sans', sans-serif;
 @pt-sans-caption: 'PT Sans Caption', sans-serif;
@@ -76,8 +81,8 @@ input[type="month"],
 input[type="week"],
 input[type="date"],
 input[type="search"] {
-    border: 1px solid #c4c4c4;
-    background: #fff;
+    border: 1px solid @gray;
+    background: @white;
     height: 40px;
     width: 100%;
     padding: 5px 10px;
@@ -89,8 +94,8 @@ input[type="search"] {
 }
 textarea {
     overflow: auto;
-    border: 1px solid #c4c4c4;
-    background: #fff;
+    border: 1px solid @gray;
+    background: @white;
     height: 180px;
     width: 100%;
     padding: 5px 10px;
@@ -101,8 +106,8 @@ textarea {
     .box-sizing(border-box);
 }
 select {
-    border: 1px solid #c4c4c4;
-    background: #fff;
+    border: 1px solid  @gray;
+    background: @white;
     height: 40px;
     width: 100%;
     padding: 5px 10px;
@@ -228,7 +233,7 @@ select {
         text-align: center;
         float: right;
         background: @main-link-color;
-        color: #fff;
+        color: @white;
         text-decoration: none;
         border-radius: 3px;
         clear: right;
@@ -349,7 +354,7 @@ select {
     .chat-holder {
         margin-left: 340px;
         background: #f9f9f9;
-        border: 1px solid #cecece;
+        border: 1px solid @gray;
         border-radius: 3px;
         padding: 19px 9px 19px 19px;
         height: 360px;
@@ -447,7 +452,7 @@ select {
             height: 35px;
             line-height: 35px;
             text-transform: uppercase;
-            color: #fff;
+            color: @white;
             background: @dark-green;
             text-decoration: none;
             border-radius: 3px;
@@ -468,8 +473,8 @@ select {
         }
         textarea {
             display: none;
-            background: #fff;
-            border: 1px solid #cecece;
+            background: @white;
+            border: 1px solid @gray;
             border-radius: 5px;
             padding: 5px;
             width: 100%;
@@ -603,7 +608,7 @@ select {
                         line-height: 30px;
                         text-align: center;
                         border-radius: 3px;
-                        color: #fff;
+                        color: @white;
                         text-decoration: none;
                         .transition(background @main-animation-duration linear);
 
@@ -639,7 +644,7 @@ select {
                         .box-sizing(border-box);
 
                         .ui-slider-range {
-                            border-top: 1px solid #fff;
+                            border-top: 1px solid @white;
                             border-radius: 15px;
                             background: rgb(253,232,203);
                             background: -moz-linear-gradient(top,  rgba(253,232,203,1) 0%, rgba(245,220,187,1) 21%, rgba(218,183,136,1) 71%, rgba(206,168,113,1) 100%);
@@ -673,7 +678,7 @@ select {
                     line-height: 40px;
                     text-align: center;
                     border-radius: 3px;
-                    color: #fff;
+                    color: @white;
                     text-decoration: none;
                     background: @dark-green;
                     .transition(background @main-animation-duration linear);
@@ -706,8 +711,8 @@ select {
         > li {
             margin-top: 20px;
             height: 560px;
-            background: #fff;
-            border: 1px solid #d3d3d3;
+            background: @white;
+            border: 1px solid @gray;
             border-radius: 4px;
             padding: 19px 9px;
             position: relative;
@@ -723,7 +728,7 @@ select {
                     height: 30px;
                     font: bold 16px/30px @pt-sans-narrow;
                     text-transform: uppercase;
-                    color: #fff;
+                    color: @white;
                     border-radius: 3px;
                     text-decoration: none;
                     .transition(background @main-animation-duration linear);
@@ -770,7 +775,7 @@ select {
 
                 .status {
                     background: @dark-blue;
-                    color: #fff;
+                    color: @white;
 
                     &.green {background: @dark-green;}
                     &.red {background: @dark-red;}
@@ -843,8 +848,8 @@ select {
                 li {
                     float: left;
                     margin: 5px 10px 0 0;
-                    border: 1px solid #dfdfdf;
-                    background: #fff;
+                    border: 1px solid @gray;
+                    background: @white;
                     border-radius: 4px;
                     height: 25px;
                     width: 70px;
@@ -862,21 +867,21 @@ select {
     .high {
         .proj-list {
             > li {
-                background: #fff url("../images/icos/ico-value-high.png") no-repeat 285px 13px;
+                background: @white url("../images/icos/ico-value-high.png") no-repeat 285px 13px;
             }
         }
     }
     .mid {
         .proj-list {
             > li {
-                background: #fff url("../images/icos/ico-value-mid.png") no-repeat 285px 13px;
+                background: @white url("../images/icos/ico-value-mid.png") no-repeat 285px 13px;
             }
         }
     }
     .low {
         .proj-list {
             > li {
-                background: #fff url("../images/icos/ico-value-low.png") no-repeat 285px 13px;
+                background: @white url("../images/icos/ico-value-low.png") no-repeat 285px 13px;
             }
         }
     }
@@ -897,7 +902,7 @@ select {
         top: 0;
         left: 0;
         right: 0;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid @white;
     }
 
     .footer-nav {
@@ -998,7 +1003,7 @@ select {
         height: 40px;
         line-height: 40px;
         text-transform: uppercase;
-        color: #fff;
+        color: @white;
         background: @green;
         text-decoration: none;
         border-radius: 3px;
@@ -1063,15 +1068,21 @@ select {
 
         .status {
             background: @dark-blue;
-            color: #fff;
+            color: @white;
 
             &.green {background: @dark-green;}
             &.red {background: @dark-red;}
         }
     }
 
-    .holder {
+    .two-columns {
         overflow: hidden;
+    }
+    .col-01 {
+        overflow: hidden;
+        float: left;
+        width: 530px;
+        padding-bottom: 10px;
 
         .img-frame {
             float: left;
@@ -1082,7 +1093,6 @@ select {
 
             h4 {
                 font-size: 18px;
-                line-height: 1;
                 color: @dark-text-color;
             }
 
@@ -1098,8 +1108,13 @@ select {
         }
     }
 
+    .col-02 {
+        float: left;
+        width: 275px;
+    }
+
     .info {
-        margin: 10px 0 0;
+        margin: 0;
         color: @dark-text-color;
         .clear-fix();
 
@@ -1139,8 +1154,8 @@ select {
             li {
                 float: left;
                 margin: 5px 10px 0 0;
-                border: 1px solid #dfdfdf;
-                background: #fff;
+                border: 1px solid @gray;
+                background: @white;
                 border-radius: 4px;
                 height: 25px;
                 width: 70px;
@@ -1161,7 +1176,7 @@ select {
             height: 30px;
             font: bold 16px/30px @pt-sans-narrow;
             text-transform: uppercase;
-            color: #fff;
+            color: @white;
             border-radius: 3px;
             text-decoration: none;
             .transition(background @main-animation-duration linear);
@@ -1210,7 +1225,7 @@ select {
     .comments {
         .comment {
             margin-top: 10px;
-            background: #fff;
+            background: @white;
             padding: 10px;
             min-width: 120px;
             .box-sizing(border-box);
@@ -1242,7 +1257,7 @@ select {
 
             h5,
             p {
-                color: #000;
+                color: @dark-text-color;
                 font-size: 14px;
                 margin-top: 3px;
             }
@@ -1267,8 +1282,8 @@ select {
                     height: 40px;
                     line-height: 40px;
                     text-align: center;
-                    background: #fff;
-                    color: #000;
+                    background: @white;
+                    color: @dark-text-color;
                     font-size: 20px;
                     text-decoration: none;
                     position: relative;
@@ -1276,12 +1291,12 @@ select {
 
                     &:hover {
                         background: #008ead;
-                        color: #fff;
+                        color: @white;
                     }
 
                     &.active {
                         background: #008ead;
-                        color: #fff;
+                        color: @white;
 
                         &:after {
                             content: '';
@@ -1316,7 +1331,7 @@ select {
         line-height: 30px;
         text-align: center;
         text-transform: uppercase;
-        color: #fff;
+        color: @white;
         text-decoration: none;
         background: @dark-green;
         border-radius: 3px;
@@ -1340,8 +1355,8 @@ select {
         width: 220px;
         height: 140px;
         margin: 20px;
-        background: #fff;
-        border: 1px solid #d3d3d3;
+        background: @white;
+        border: 1px solid @gray;
         border-radius: 5px;
         text-align: center;
         padding-top: 5px;
@@ -1416,21 +1431,21 @@ select {
                 width: 30px;
                 height: 30px;
                 line-height: 28px;
-                border: 1px solid #7a7a7a;
+                border: 1px solid @dark-gray;
                 border-radius: 2px;
                 text-align: center;
                 font-size: 18px;
                 font-weight: bold;
                 text-decoration: none;
                 color: @dark-text-color;
-                background: #fff;
+                background: @white;
                 .box-sizing(border-box);
                 .transition(all @main-animation-duration linear);
 
                 &.active,
                 &:hover {
-                    background: #7a7a7a;
-                    color: #fff;
+                    background: @dark-gray;
+                    color: @white;
                 }
             }
         }
@@ -1445,7 +1460,7 @@ select {
     .holder {
         width: 48%;
         height: 420px;
-        background: #fff;
+        background: @white;
         border-radius: 3px;
         margin: 20px 0;
         padding: 0 17px;
@@ -1468,7 +1483,7 @@ select {
             background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 100%);
             background: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 100%);
             background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#ffffff',GradientType=0 );
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='@whitefff',GradientType=0 );
         }
 
         .img-frame {
@@ -1520,6 +1535,78 @@ select {
         .holder {
             display: none;
             margin: 14px 0 -14px;
+        }
+    }
+}
+/* digest */
+.digest-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .block {
+        margin: 10px 0;
+        width: 320px;
+        border: 1px solid @gray;
+        border-radius: 5px;
+        padding: 10px 10px 65px 20px;
+        background: #fff;
+        position: relative;
+        .box-sizing(border-box);
+
+        .heading {
+            line-height: 1.1;
+        }
+
+        .date {
+            padding-left: 28px;
+            background: url("../images/icos/ico-calendar.png") no-repeat 0 50%;
+            line-height: 20px;
+            font-style: normal;
+            color: @dark-text-color;
+            font-size: 14px;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .img-frame {
+            height: 120px;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .text {
+            line-height: 1.4;
+            color: @dark-text-color;
+        }
+
+        .more {
+            display: block;
+            width: 130px;
+            height: 30px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -65px;
+            text-align: center;
+            border-radius: 3px;
+            background: @dark-green;
+            text-transform: uppercase;
+            color: @white;
+            font: bold 16px/30px @pt-sans-narrow;
+            text-decoration: none;
+            .transition(background @main-animation-duration);
+
+            &:hover {
+                background: darken(@dark-green, 10%);
+            }
         }
     }
 }
