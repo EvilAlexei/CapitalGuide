@@ -5,14 +5,16 @@
 /* variables */
 @main-font-size: 16px;
 @main-text-color: #575757;
-@dark-text-color: #000;
-@main-link-color: #0082ac;
+@dark-text-color: @black;
+@main-link-color: @blue;
 @main-animation-duration: 0.3s;
 
 @white: #fff;
+@black: #000;
 @gray: #c4c4c4;
 @green: #79ac00;
 @red: #a81430;
+@blue: #0082ac;
 
 @dark-gray: #7a7a7a;
 @dark-blue: #0e6e9a;
@@ -120,6 +122,7 @@ select {
 ::-webkit-input-placeholder {}
 ::-moz-placeholder {}
 :-ms-input-placeholder {}
+
 .clear-fix {
     .clear-fix();
 }
@@ -317,6 +320,10 @@ select {
         font: bold 27px/1.2 @pt-sans-narrow;
         color: #262626;
         text-transform: uppercase;
+
+        &.no-uppercase {
+            text-transform: none;
+        }
     }
 }
 /* aside */
@@ -1607,6 +1614,118 @@ select {
             &:hover {
                 background: darken(@dark-green, 10%);
             }
+        }
+    }
+}
+/* chat */
+.chat {
+
+}
+.new-message {
+    textarea {
+        height: 160px;
+        line-height: 25px;
+        padding: 15px;
+        .box-shadow(none);
+    }
+    .btn-row {
+        width: 100%;
+        overflow: hidden;
+        margin: 10px 0;
+
+        a {
+            height: 30px;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: @white;
+            font-family: @pt-sans-narrow;
+            text-decoration: none;
+            border-radius: 3px;
+            background-repeat: no-repeat;
+            .transition(background @main-animation-duration);
+        }
+
+        .attach {
+            float: left;
+            width: 160px;
+            padding-left: 13px;
+            background-image: url("../images/icos/ico-staple.png");
+            background-position: 134px 50%;
+            background-color: @dark-gray;
+            .box-sizing(border-box);
+
+            &:hover {
+                background-color: darken(@dark-gray, 10%);
+            }
+        }
+
+        .send {
+            float: right;
+            width: 120px;
+            padding-left: 19px;
+            background-image: url("../images/icos/ico-send-white.png");
+            background-position: 95px 50%;
+            background-color: @dark-blue;
+            .box-sizing(border-box);
+
+            &:hover {
+                background-color: darken(@dark-blue, 10%);
+            }
+        }
+    }
+    .attachemnts {
+        li {
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-right: 10px;
+                word-break: break-all;
+                max-width: 260px;
+            }
+            
+            .delete {
+                text-indent: -9999px;
+                display: inline-block;
+                background: url("../images/icos/ico-cross.png") no-repeat;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+.users-online {
+    margin-top: 30px;
+    position: relative;
+    background: @white;
+    border-radius: 3px;
+    padding: 10px 20px 30px;
+    .box-sizing(border-box);
+
+    .top-bar {
+        overflow: hidden;
+
+        h4 {
+            font: 22px/1 @pt-sans-narrow;
+            float: left;
+        }
+        .quantity {
+            float: right;
+            font: bold 22px/1 @pt-sans-narrow;
+            padding-right: 23px;
+            background: url("../images/icos/ico-man.png") no-repeat 100% 50%;
+            color: @dark-green;
+        }
+    }
+    .users-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li {
+            margin: 10px 0;
+            flex: 1 100%;
         }
     }
 }

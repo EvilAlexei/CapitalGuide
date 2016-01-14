@@ -390,6 +390,9 @@ select {
   color: #262626;
   text-transform: uppercase;
 }
+#main h2.no-uppercase {
+  text-transform: none;
+}
 /* aside */
 .aside {
   width: 330px;
@@ -1684,6 +1687,111 @@ select {
 }
 .digest-list .block .more:hover {
   background: #566b0a;
+}
+/* chat */
+.new-message textarea {
+  height: 160px;
+  line-height: 25px;
+  padding: 15px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.new-message .btn-row {
+  width: 100%;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.new-message .btn-row a {
+  height: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-decoration: none;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.new-message .btn-row .attach {
+  float: left;
+  width: 160px;
+  padding-left: 13px;
+  background-image: url("../images/icos/ico-staple.png");
+  background-position: 134px 50%;
+  background-color: #7a7a7a;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.new-message .btn-row .attach:hover {
+  background-color: #616161;
+}
+.new-message .btn-row .send {
+  float: right;
+  width: 120px;
+  padding-left: 19px;
+  background-image: url("../images/icos/ico-send-white.png");
+  background-position: 95px 50%;
+  background-color: #0e6e9a;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.new-message .btn-row .send:hover {
+  background-color: #0a4d6b;
+}
+.new-message .attachemnts li {
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+}
+.new-message .attachemnts li a {
+  margin-right: 10px;
+  word-break: break-all;
+  max-width: 260px;
+}
+.new-message .attachemnts li .delete {
+  text-indent: -9999px;
+  display: inline-block;
+  background: url("../images/icos/ico-cross.png") no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.users-online {
+  margin-top: 30px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  padding: 10px 20px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.users-online .top-bar {
+  overflow: hidden;
+}
+.users-online .top-bar h4 {
+  font: 22px/1 'PT Sans Narrow', sans-serif;
+  float: left;
+}
+.users-online .top-bar .quantity {
+  float: right;
+  font: bold 22px/1 'PT Sans Narrow', sans-serif;
+  padding-right: 23px;
+  background: url("../images/icos/ico-man.png") no-repeat 100% 50%;
+  color: #7b9a0e;
+}
+.users-online .users-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.users-online .users-list li {
+  margin: 10px 0;
+  flex: 1 100%;
 }
 /* media query */
 @media only screen and (min-width: 1000px) and (max-width: 1420px) {
