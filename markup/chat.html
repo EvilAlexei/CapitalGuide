@@ -15,7 +15,7 @@
 <!-- BEGIN WRAPPER -->
 <div id="wrapper">
   <!-- BEGIN HEADER -->
-  <div id="header">
+  <header id="header">
     <div class="wrap">
       <div class="left">
         <div class="col">
@@ -57,14 +57,45 @@
         <li id="marker"></li>
       </ul>
     </nav>
-  </div>
+  </header>
   <!-- END HEADER -->
 
   <!-- BEGIN MAIN -->
   <div id="main">
     <!-- BEGIN SIDEBAR -->
     <div id="sidebar">
-
+      <h2 class="no-uppercase">Написать сообщение</h2>
+      <div class="new-message">
+        <textarea>Всем привет! Я новенький в этом чате, как ту все устроено, расскажешь?</textarea>
+        <div class="btn-row">
+          <a href="#" class="attach">прикрепить фото</a>
+          <a href="#" class="send">отправить</a>
+        </div>
+        <ul class="attachemnts">
+          <li>
+            <a href="#">meandmyselfie.jpg</a>
+            <span class="delete">delete</span>
+          </li>
+        </ul>
+      </div>
+      <div class="users-online">
+        <div class="top-bar">
+          <h4>Пользователи онлайн</h4>
+          <span class="quantity">156</span>
+        </div>
+        <ul class="users-list">
+          <li><img src="images/avatars/img-chat-avatar-01.png" alt="user-01"></li>
+          <li><img src="images/avatars/img-chat-avatar-02.png" alt="user-02"></li>
+          <li><img src="images/avatars/img-chat-avatar-03.png" alt="user-03"></li>
+          <li><img src="images/avatars/img-chat-avatar-04.png" alt="user-04"></li>
+          <li><img src="images/avatars/img-chat-avatar-01.png" alt="user-01"></li>
+          <li><img src="images/avatars/img-chat-avatar-02.png" alt="user-02"></li>
+          <li><img src="images/avatars/img-chat-avatar-03.png" alt="user-03"></li>
+          <li><img src="images/avatars/img-chat-avatar-04.png" alt="user-04"></li>
+          <li><img src="images/avatars/img-chat-avatar-01.png" alt="user-01"></li>
+        </ul>
+        <a href="#" class="show-all">Показать всех</a>
+      </div>
     </div>
     <!-- END SIDEBAR -->
 
@@ -76,13 +107,294 @@
         <li><a href="#">Главная</a></li>
         <li>Чат</li>
       </ul>
+
+      <!-- begin chat -->
+      <div class="chat">
+        <div class="message">
+          <div class="img-frame">
+            <img src="images/avatars/img-chat-avatar-01.png" alt="">
+          </div>
+          <div class="holder">
+            <h3>Доктор Хаус</h3>
+            <p>Всем привет в этом чате! Расскажите, куда лучше вложить деньги? А то накопил нириальную сумму,
+              а что с ними делать не знаю.</p>
+
+            <div class="info-bar">
+              <div class="published">
+                <em class="date">15.08.2015</em>
+                в
+                <span class="time">12: 34</span>
+              </div>
+              <span class="comments">3</span>
+              <a href="#" class="all-comments">Показать все комментарии</a>
+            </div>
+
+            <ul class="comments">
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-chat-avatar-02.png" alt="">
+                </div>
+                <div class="holder">
+                  <h3>Лиза Кадди</h3>
+                  <p>Я все свои деньги вкладываю в лисьи норы!</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-chat-avatar-03.png" alt="">
+                </div>
+                <div class="holder">
+                  <h3>Джеймс Уилсон</h3>
+                  <p>Лиза Кадди, давно известно что лисьи норы не самый надежный способ вложить деньги, я бы лучше
+                    посоветовал вкладывать в медвежьи берлоги!</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-chat-avatar-04.png" alt="">
+                </div>
+                <div class="holder">
+                  <h3>Эрик Форман</h3>
+                  <p>Вкладывайте в фарму, господа!</p>
+                </div>
+              </li>
+            </ul>
+
+            <form action="#" class="comment">
+              <input type="text">
+              <a href="#" class="send">send</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="message">
+          <div class="img-frame">
+            <img src="images/avatars/img-chat-avatar-02.png" alt="">
+          </div>
+          <div class="holder">
+            <h3>Эрик Форман</h3>
+            <p>Я тут чего подумал. Может замутить свой фарма-хайпчик на джумле? Как думаете за пару недель можно
+              научиться дизайну и программированию?</p>
+
+            <div class="info-bar no-comments">
+              <div class="published">
+                <em class="date">15.08.2015</em>
+                в
+                <span class="time">12: 34</span>
+              </div>
+              <span class="comments">0</span>
+              <a href="#" class="all-comments">Показать все комментарии</a>
+            </div>
+
+            <form action="#" class="comment">
+              <input type="text">
+              <a href="#" class="send">send</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="message">
+          <div class="img-frame">
+            <img src="images/avatars/img-chat-avatar-03.png" alt="">
+          </div>
+          <div class="holder">
+            <h3>Тринадцатая</h3>
+            <img src="images/img-gallyer-01.png" alt="">
+            <p>Недавно у нас в гостях были наши друзья - семейная пара. После ужина, я, как обычно, стал помогать
+              своей жене убирать со стола и начал мыть посуду. Для нашей семьи это привычное дело. Не могу сказать,
+              что в доме только я мою посуду, но я не вижу в этом ничего особенного и из рядa вон выходящего.
+              По-моему, помогать своей женщине - это первая обязанность мужчины.</p>
+            <div class="info-bar no-comments">
+              <div class="published">
+                <em class="date">15.08.2015</em>
+                в
+                <span class="time">12: 34</span>
+              </div>
+              <span class="comments">3</span>
+              <a href="#" class="all-comments">Показать все комментарии</a>
+            </div>
+
+            <form action="#" class="comment">
+              <input type="text">
+              <a href="#" class="send">send</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="message">
+          <div class="img-frame">
+            <img src="images/avatars/img-chat-avatar-04.png" alt="">
+          </div>
+          <div class="holder">
+            <h3>Эллисон Кэмерон</h3>
+            <p>Я зарабатываю 100$ в день не выходя из дома и ничего не делая, могу рассказать вам как это сделать
+              всего за 10$</p>
+            <div class="info-bar no-comments">
+              <div class="published">
+                <em class="date">15.08.2015</em>
+                в
+                <span class="time">12: 34</span>
+              </div>
+              <span class="comments">3</span>
+              <a href="#" class="all-comments">Показать все комментарии</a>
+            </div>
+
+            <form action="#" class="comment">
+              <input type="text">
+              <a href="#" class="send">send</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="message">
+          <div class="img-frame">
+            <img src="images/avatars/img-chat-avatar-01.png" alt="">
+          </div>
+          <div class="holder">
+            <h3>Доктор Хаус</h3>
+            <p>Всем привет в этом чате! Расскажите, куда лучше вложить деньги? А то накопил нириальную сумму,
+              а что с ними делать не знаю.</p>
+
+            <div class="info-bar">
+              <div class="published">
+                <em class="date">15.08.2015</em>
+                в
+                <span class="time">12: 34</span>
+              </div>
+              <span class="comments">3</span>
+              <a href="#" class="all-comments">Показать все комментарии</a>
+            </div>
+
+            <ul class="comments">
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-chat-avatar-02.png" alt="">
+                </div>
+                <div class="holder">
+                  <h3>Лиза Кадди</h3>
+                  <p>Я все свои деньги вкладываю в лисьи норы!</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-chat-avatar-03.png" alt="">
+                </div>
+                <div class="holder">
+                  <h3>Джеймс Уилсон</h3>
+                  <p>Лиза Кадди, давно известно что лисьи норы не самый надежный способ вложить деньги, я бы лучше
+                    посоветовал вкладывать в медвежьи берлоги!</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="img-frame">
+                  <img src="images/avatars/img-chat-avatar-04.png" alt="">
+                </div>
+                <div class="holder">
+                  <h3>Эрик Форман</h3>
+                  <p>Вкладывайте в фарму, господа!</p>
+                </div>
+              </li>
+            </ul>
+
+            <form action="#" class="comment">
+              <input type="text">
+              <a href="#" class="send">send</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="message">
+          <div class="img-frame">
+            <img src="images/avatars/img-chat-avatar-02.png" alt="">
+          </div>
+          <div class="holder">
+            <h3>Эрик Форман</h3>
+            <p>Я тут чего подумал. Может замутить свой фарма-хайпчик на джумле? Как думаете за пару недель можно
+              научиться дизайну и программированию?</p>
+
+            <div class="info-bar no-comments">
+              <div class="published">
+                <em class="date">15.08.2015</em>
+                в
+                <span class="time">12: 34</span>
+              </div>
+              <span class="comments">0</span>
+              <a href="#" class="all-comments">Показать все комментарии</a>
+            </div>
+
+            <form action="#" class="comment">
+              <input type="text">
+              <a href="#" class="send">send</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="message">
+          <div class="img-frame">
+            <img src="images/avatars/img-chat-avatar-03.png" alt="">
+          </div>
+          <div class="holder">
+            <h3>Тринадцатая</h3>
+            <img src="images/img-gallyer-01.png" alt="">
+            <p>Недавно у нас в гостях были наши друзья - семейная пара. После ужина, я, как обычно, стал помогать
+              своей жене убирать со стола и начал мыть посуду. Для нашей семьи это привычное дело. Не могу сказать,
+              что в доме только я мою посуду, но я не вижу в этом ничего особенного и из рядa вон выходящего.
+              По-моему, помогать своей женщине - это первая обязанность мужчины.</p>
+            <div class="info-bar no-comments">
+              <div class="published">
+                <em class="date">15.08.2015</em>
+                в
+                <span class="time">12: 34</span>
+              </div>
+              <span class="comments">3</span>
+              <a href="#" class="all-comments">Показать все комментарии</a>
+            </div>
+
+            <form action="#" class="comment">
+              <input type="text">
+              <a href="#" class="send">send</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="message">
+          <div class="img-frame">
+            <img src="images/avatars/img-chat-avatar-04.png" alt="">
+          </div>
+          <div class="holder">
+            <h3>Эллисон Кэмерон</h3>
+            <p>Я зарабатываю 100$ в день не выходя из дома и ничего не делая, могу рассказать вам как это сделать
+              всего за 10$</p>
+            <div class="info-bar no-comments">
+              <div class="published">
+                <em class="date">15.08.2015</em>
+                в
+                <span class="time">12: 34</span>
+              </div>
+              <span class="comments">3</span>
+              <a href="#" class="all-comments">Показать все комментарии</a>
+            </div>
+
+            <form action="#" class="comment">
+              <input type="text">
+              <a href="#" class="send">send</a>
+            </form>
+          </div>
+        </div>
+        <a href="#" class="more">Загрузить еще</a>
+      </div>
+      <!-- end chat -->
     </div>
     <!-- END CONTENT -->
   </div>
   <!-- END MAIN -->
 
   <!-- BEGIN FOOTER -->
-  <div id="footer">
+  <footer id="footer">
     <ul class="footer-nav">
       <li><a href="index.html" class="active">Главная</a></li>
       <li><a href="digest.html">Дайджест</a></li>
@@ -96,7 +408,7 @@
       <p>CapitalGuide не несёт ответственности за действия администрации проектов, представленных на этом сайте.</p>
       <p><strong>&copy; 2015 CAPITAL GUIDE — лучший мониторинг высокодоходных инвестиций.</strong></p>
     </div>
-  </div>
+  </footer>
   <!-- END FOOTER -->
 </div>
 <!-- END WRAPPER -->
