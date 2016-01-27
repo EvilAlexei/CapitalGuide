@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/font-face.css" type="text/css"/>
   <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css"/>
+  <link rel="stylesheet" href="css/modal.css" type="text/css"/>
   <link rel="stylesheet" href="css/main.css" type="text/css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+  <script src="js/modal.js"></script>
   <script src="js/main.js"></script>
   <title>CapitalGuide | Project</title>
 </head>
@@ -42,11 +44,15 @@
           <li><a href="#" class="ru">rus</a></li>
           <li><a href="#" class="en">eng</a></li>
         </ul>
-        <a href="#" class="login-reg">Вход | Регистрация</a>
+        <a href="#" class="login-reg">
+          <span class="desktop">Вход | Регистрация</span>
+          <span class="mobile">Логин</span>
+        </a>
         <div class="clear-fix"></div>
       </div>
     </div>
     <nav id="nav">
+      <a href="#" class="site-menu">Меню сайта <i></i></a>
       <ul>
         <li class="current"><a href="index.html">Главная</a></li>
         <li><a href="digest.html">Дайджест</a></li>

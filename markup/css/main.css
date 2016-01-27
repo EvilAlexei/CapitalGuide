@@ -266,6 +266,9 @@ select {
   -o-transition: background 0.3s linear;
   transition: background 0.3s linear;
 }
+#header .login-reg .mobile {
+  display: none;
+}
 #header .login-reg:hover {
   background: #004860;
 }
@@ -288,6 +291,9 @@ select {
 }
 #nav:after {
   clear: both;
+}
+#nav .site-menu {
+  display: none;
 }
 #nav li {
   float: left;
@@ -581,18 +587,28 @@ select {
 .projects .proj-cols {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   position: relative;
 }
-.projects .filters li,
-.projects .proj-cols li {
+.projects .filters > li,
+.projects .proj-cols > li {
   width: 330px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.projects .filters .filter-dropdown,
-.projects .proj-cols .filter-dropdown {
+.projects .filters {
+  z-index: 3;
+}
+.projects .filters h3 {
+  font-family: 'PF Centro Slab Pro', sans-serif;
+  font-size: 22px;
+  color: #000000;
+}
+.projects .filters h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.projects .filters .filter-dropdown {
   border: none;
   color: #000000;
   display: block;
@@ -604,8 +620,7 @@ select {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.projects .filters .filter-dropdown p,
-.projects .proj-cols .filter-dropdown p {
+.projects .filters .filter-dropdown p {
   height: 40px;
   text-transform: uppercase;
   font: bold 14px/40px 'PT Sans', sans-serif;
@@ -616,8 +631,7 @@ select {
   padding-left: 10px;
   cursor: pointer;
 }
-.projects .filters .filter-dropdown .dropdown,
-.projects .proj-cols .filter-dropdown .dropdown {
+.projects .filters .filter-dropdown .dropdown {
   display: none;
   position: absolute;
   z-index: 1;
@@ -631,44 +645,34 @@ select {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.projects .filters .filter-dropdown .dropdown fieldset,
-.projects .proj-cols .filter-dropdown .dropdown fieldset {
+.projects .filters .filter-dropdown .dropdown fieldset {
   border-top: 1px solid #ddd;
   padding: 7px 0 20px;
 }
-.projects .filters .filter-dropdown .dropdown fieldset label,
-.projects .proj-cols .filter-dropdown .dropdown fieldset label {
+.projects .filters .filter-dropdown .dropdown fieldset label {
   display: block;
   padding-bottom: 16px;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .row,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .row {
+.projects .filters .filter-dropdown .dropdown fieldset .row {
   width: 100%;
 }
 .projects .filters .filter-dropdown .dropdown fieldset .row:before,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .row:before,
-.projects .filters .filter-dropdown .dropdown fieldset .row:after,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .row:after {
+.projects .filters .filter-dropdown .dropdown fieldset .row:after {
   content: '';
   display: table;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .row:after,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .row:after {
+.projects .filters .filter-dropdown .dropdown fieldset .row:after {
   clear: both;
 }
 .projects .filters .filter-dropdown .dropdown fieldset .row:before,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .row:before,
-.projects .filters .filter-dropdown .dropdown fieldset .row:after,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .row:after {
+.projects .filters .filter-dropdown .dropdown fieldset .row:after {
   content: '';
   display: table;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .row:after,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .row:after {
+.projects .filters .filter-dropdown .dropdown fieldset .row:after {
   clear: both;
 }
-.projects .filters .filter-dropdown .dropdown fieldset input[type="text"],
-.projects .proj-cols .filter-dropdown .dropdown fieldset input[type="text"] {
+.projects .filters .filter-dropdown .dropdown fieldset input[type="text"] {
   width: 82px;
   height: 31px;
   padding: 3px 5px;
@@ -683,12 +687,10 @@ select {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.projects .filters .filter-dropdown .dropdown fieldset input[type="text"]:first-child,
-.projects .proj-cols .filter-dropdown .dropdown fieldset input[type="text"]:first-child {
+.projects .filters .filter-dropdown .dropdown fieldset input[type="text"]:first-child {
   float: left;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .btn-status,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .btn-status {
+.projects .filters .filter-dropdown .dropdown fieldset .btn-status {
   float: left;
   margin-right: 5px;
   width: 100px;
@@ -703,34 +705,27 @@ select {
   -o-transition: background 0.3s linear;
   transition: background 0.3s linear;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .btn-status.green,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .btn-status.green {
+.projects .filters .filter-dropdown .dropdown fieldset .btn-status.green {
   background: #7b9a0e;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .btn-status.green:hover,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .btn-status.green:hover {
+.projects .filters .filter-dropdown .dropdown fieldset .btn-status.green:hover {
   background: #566b0a;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .btn-status.green.active,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .btn-status.green.active {
+.projects .filters .filter-dropdown .dropdown fieldset .btn-status.green.active {
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
-.projects .filters .filter-dropdown .dropdown fieldset .btn-status.blue,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .btn-status.blue {
+.projects .filters .filter-dropdown .dropdown fieldset .btn-status.blue {
   background: #0e6e9a;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .btn-status.blue:hover,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .btn-status.blue:hover {
+.projects .filters .filter-dropdown .dropdown fieldset .btn-status.blue:hover {
   background: #0a4d6b;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .btn-status.blue.active,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .btn-status.blue.active {
+.projects .filters .filter-dropdown .dropdown fieldset .btn-status.blue.active {
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
-.projects .filters .filter-dropdown .dropdown fieldset .ui-slider,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .ui-slider {
+.projects .filters .filter-dropdown .dropdown fieldset .ui-slider {
   margin-top: 10px;
   height: 17px;
   border: none;
@@ -742,8 +737,7 @@ select {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .ui-slider .ui-slider-range,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .ui-slider .ui-slider-range {
+.projects .filters .filter-dropdown .dropdown fieldset .ui-slider .ui-slider-range {
   border-top: 1px solid #ffffff;
   border-radius: 15px;
   background: #fde8cb;
@@ -751,11 +745,10 @@ select {
   background: -webkit-linear-gradient(top, #fde8cb 0%, #f5dcbb 21%, #dab788 71%, #cea871 100%);
   background: linear-gradient(to bottom, #fde8cb 0%, #f5dcbb 21%, #dab788 71%, #cea871 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fde8cb', endColorstr='#cea871', GradientType=0);
-  -webkit-box-shadow: 0 3px 5px 0 #808080;
-  box-shadow: 0 3px 5px 0 #808080;
+  -webkit-box-shadow: 0 3px 5px 0 #7a7a7a;
+  box-shadow: 0 3px 5px 0 #7a7a7a;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .ui-slider .ui-slider-handle,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .ui-slider .ui-slider-handle {
+.projects .filters .filter-dropdown .dropdown fieldset .ui-slider .ui-slider-handle {
   width: 13px;
   height: 13px;
   top: 3px;
@@ -764,12 +757,10 @@ select {
   border: none;
   background: url("../images/bg-slider-handler.png") no-repeat;
 }
-.projects .filters .filter-dropdown .dropdown fieldset .ui-slider .ui-slider-handle:last-child,
-.projects .proj-cols .filter-dropdown .dropdown fieldset .ui-slider .ui-slider-handle:last-child {
+.projects .filters .filter-dropdown .dropdown fieldset .ui-slider .ui-slider-handle:last-child {
   margin-left: -18px;
 }
-.projects .filters .filter-dropdown .dropdown .submit,
-.projects .proj-cols .filter-dropdown .dropdown .submit {
+.projects .filters .filter-dropdown .dropdown .submit {
   margin: 0 auto;
   width: 140px;
   height: 40px;
@@ -785,21 +776,8 @@ select {
   -o-transition: background 0.3s linear;
   transition: background 0.3s linear;
 }
-.projects .filters .filter-dropdown .dropdown .submit:hover,
-.projects .proj-cols .filter-dropdown .dropdown .submit:hover {
+.projects .filters .filter-dropdown .dropdown .submit:hover {
   background: #566b0a;
-}
-.projects .filters {
-  z-index: 3;
-}
-.projects .filters h3 {
-  font-family: 'PF Centro Slab Pro', sans-serif;
-  font-size: 22px;
-  color: #000000;
-}
-.projects .filters h3 a {
-  color: inherit;
-  text-decoration: none;
 }
 .projects .proj-list {
   z-index: 1;
@@ -1562,8 +1540,8 @@ select {
   box-sizing: border-box;
 }
 .articles .holder:hover {
-  -webkit-box-shadow: 0 0 15px 0 #808080;
-  box-shadow: 0 0 15px 0 #808080;
+  -webkit-box-shadow: 0 0 15px 0 #7a7a7a;
+  box-shadow: 0 0 15px 0 #7a7a7a;
 }
 .articles .holder:after {
   content: '';
@@ -1794,10 +1772,127 @@ select {
   flex: 1 100%;
 }
 /* media query */
-@media only screen and (min-width: 1000px) and (max-width: 1420px) {
+@media only screen and (min-width: 1024px) and (max-width: 1420px) {
   /* 1420 and not 1400 because of scrollbar */
   #wrapper {
     width: 1000px;
     padding: 0;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  #wrapper {
+    width: auto;
+    min-width: 480px;
+    padding: 0;
+  }
+  #header {
+    position: relative;
+    padding: 40px 20px 0;
+  }
+  #header .wrap .left .col:nth-child(n+2) {
+    margin: 23px 0 0;
+  }
+  #header .wrap .left .col:nth-child(2) {
+    clear: left;
+    margin-right: 35px;
+  }
+  #header .wrap .right {
+    position: absolute;
+    right: 20px;
+    top: 62px;
+    width: 118px;
+  }
+  #header .wrap .right .lang {
+    margin-top: 0;
+    float: left;
+  }
+  #header .wrap .right .lang li {
+    margin: 0 12px 0 0;
+  }
+  #header .login-reg {
+    width: 118px;
+  }
+  #header .login-reg .desktop {
+    display: none;
+  }
+  #header .login-reg .mobile {
+    display: inline-block;
+    padding-right: 35px;
+    background: url("../images/icos/ico-key.png") no-repeat 100% 50%;
+  }
+  #nav {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    text-align: center;
+    z-index: 9999;
+    -webkit-box-shadow: 0 0 20px 0 #c4c4c4;
+    box-shadow: 0 0 20px 0 #c4c4c4;
+  }
+  #nav .site-menu {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    height: 40px;
+    font: bold 18px/40px 'PF Centro Slab Pro', sans-serif;
+    position: relative;
+    z-index: 1;
+  }
+  #nav .site-menu i {
+    display: inline-block;
+    vertical-align: sub;
+    width: 30px;
+    height: 22px;
+    background: url("../images/icos/ico-menu.png") no-repeat 100% 50%;
+  }
+  #nav.active .site-menu {
+    -webkit-box-shadow: 0 0 20px 0 #c4c4c4;
+    box-shadow: 0 0 20px 0 #c4c4c4;
+  }
+  #nav ul {
+    display: none;
+    padding: 10px 0;
+    background: #ffffff;
+  }
+  #nav ul li {
+    float: none;
+    text-align: center;
+  }
+  #nav ul li.current {
+    font-weight: bold;
+  }
+  #nav ul li a {
+    height: 60px;
+    line-height: 60px;
+  }
+  #nav ul #marker {
+    border: none;
+  }
+  #main {
+    padding: 0 20px;
+  }
+  #main .main-holder {
+    display: none;
+  }
+  #main .filters > li,
+  #main .proj-cols > li {
+    display: none;
+  }
+  #main .filters > li:first-child,
+  #main .proj-cols > li:first-child {
+    display: block;
+    width: 100%;
+  }
+  #footer {
+    padding: 10px 20px;
+  }
+  #footer .footer-nav {
+    display: none;
+  }
+  #footer .holder p {
+    line-height: 30px;
   }
 }
