@@ -225,9 +225,31 @@
     <!-- begin projects -->
     <div class="projects">
       <div class="filter-overlay"></div>
-      <ul class="filters">
+      <ul class="tab-menu">
         <li>
-          <h3><a href="#">Высокодоходные</a></h3>
+          <h3>
+            <span class="desktop">Высокодоходные</span>
+            <span class="mobile current" data-tab="high">ВЫСОКИЙ</span>
+          </h3>
+        </li>
+
+        <li>
+          <h3>
+            <span class="desktop">Среднедоходные</span>
+            <span class="mobile" data-tab="mid">СРЕДНИЙ</span>
+          </h3>
+        </li>
+
+        <li>
+          <h3>
+            <span class="desktop">Низкодоходные</span>
+            <span class="mobile" data-tab="low">НИЗКИЙ</span>
+          </h3>
+        </li>
+      </ul>
+
+      <ul class="proj-cols">
+        <li class="high">
           <div class="filter-dropdown">
             <p class="opener">Фильтр проектов</p>
             <div class="dropdown">
@@ -275,115 +297,7 @@
               </form>
             </div>
           </div>
-        </li>
-
-        <li>
-          <h3><a href="#">Среднедоходные</a></h3>
-          <div class="filter-dropdown">
-            <p class="opener">Фильтр проектов</p>
-            <div class="dropdown">
-              <form action="#" id="mid-value">
-                <fieldset>
-                  <label>Сумма инвестиций в рублях</label>
-                  <div class="row">
-                    <input type="text" class="input-01">
-                    <input type="text" class="input-02">
-                  </div>
-                  <div class="slider-range-01"></div>
-                </fieldset>
-                <fieldset>
-                  <label>Количество дней в работе</label>
-                  <div class="row">
-                    <input type="text" class="input-03">
-                    <input type="text" class="input-04">
-                  </div>
-                  <div class="slider-range-02"></div>
-                </fieldset>
-                <fieldset>
-                  <label>Процентная ставка</label>
-                  <div class="row">
-                    <input type="text" class="input-05">
-                    <input type="text" class="input-06">
-                  </div>
-                  <div class="slider-range-03"></div>
-                </fieldset>
-                <fieldset>
-                  <label>Платежеспособность</label>
-                  <div class="row">
-                    <a href="#" class="btn-status green">Платит</a>
-                    <a href="#" class="btn-status blue">Не платит</a>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <label>Реферальный процент</label>
-                  <div class="row">
-                    <input type="text" class="input-07">
-                    <input type="text" class="input-08">
-                  </div>
-                  <div class="slider-range-04"></div>
-                </fieldset>
-                <a href="#" class="submit">Показать</a>
-              </form>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <h3><a href="#">Низкодоходные</a></h3>
-          <div class="filter-dropdown">
-            <p class="opener">Фильтр проектов</p>
-            <div class="dropdown">
-              <form action="#" id="low-value">
-                <fieldset>
-                  <label>Сумма инвестиций в рублях</label>
-                  <div class="row">
-                    <input type="text" class="input-01">
-                    <input type="text" class="input-02">
-                  </div>
-                  <div class="slider-range-01"></div>
-                </fieldset>
-                <fieldset>
-                  <label>Количество дней в работе</label>
-                  <div class="row">
-                    <input type="text" class="input-03">
-                    <input type="text" class="input-04">
-                  </div>
-                  <div class="slider-range-02"></div>
-                </fieldset>
-                <fieldset>
-                  <label>Процентная ставка</label>
-                  <div class="row">
-                    <input type="text" class="input-05">
-                    <input type="text" class="input-06">
-                  </div>
-                  <div class="slider-range-03"></div>
-                </fieldset>
-                <fieldset>
-                  <label>Платежеспособность</label>
-                  <div class="row">
-                    <a href="#" class="btn-status green">Платит</a>
-                    <a href="#" class="btn-status blue">Не платит</a>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <label>Реферальный процент</label>
-                  <div class="row">
-                    <input type="text" class="input-07">
-                    <input type="text" class="input-08">
-                  </div>
-                  <div class="slider-range-04"></div>
-                </fieldset>
-                <a href="#" class="submit">Показать</a>
-              </form>
-            </div>
-          </div>
-        </li>
-      </ul>
-
-      <ul class="proj-cols">
-        <li class="high">
           <ul class="proj-list">
-
             <li>
               <h3>Poker Automatics</h3>
 
@@ -579,8 +493,55 @@
           </ul>
         </li>
         <li class="mid">
-          <ul class="proj-list">
+          <div class="filter-dropdown">
+            <p class="opener">Фильтр проектов</p>
+            <div class="dropdown">
+              <form action="#" id="mid-value">
+                <fieldset>
+                  <label>Сумма инвестиций в рублях</label>
+                  <div class="row">
+                    <input type="text" class="input-01">
+                    <input type="text" class="input-02">
+                  </div>
+                  <div class="slider-range-01"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Количество дней в работе</label>
+                  <div class="row">
+                    <input type="text" class="input-03">
+                    <input type="text" class="input-04">
+                  </div>
+                  <div class="slider-range-02"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Процентная ставка</label>
+                  <div class="row">
+                    <input type="text" class="input-05">
+                    <input type="text" class="input-06">
+                  </div>
+                  <div class="slider-range-03"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Платежеспособность</label>
+                  <div class="row">
+                    <a href="#" class="btn-status green">Платит</a>
+                    <a href="#" class="btn-status blue">Не платит</a>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <label>Реферальный процент</label>
+                  <div class="row">
+                    <input type="text" class="input-07">
+                    <input type="text" class="input-08">
+                  </div>
+                  <div class="slider-range-04"></div>
+                </fieldset>
+                <a href="#" class="submit">Показать</a>
+              </form>
+            </div>
+          </div>
 
+          <ul class="proj-list">
             <li>
               <h3>SocialFinanceCompany</h3>
 
@@ -755,6 +716,54 @@
           </ul>
         </li>
         <li class="low">
+          <div class="filter-dropdown">
+            <p class="opener">Фильтр проектов</p>
+            <div class="dropdown">
+              <form action="#" id="low-value">
+                <fieldset>
+                  <label>Сумма инвестиций в рублях</label>
+                  <div class="row">
+                    <input type="text" class="input-01">
+                    <input type="text" class="input-02">
+                  </div>
+                  <div class="slider-range-01"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Количество дней в работе</label>
+                  <div class="row">
+                    <input type="text" class="input-03">
+                    <input type="text" class="input-04">
+                  </div>
+                  <div class="slider-range-02"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Процентная ставка</label>
+                  <div class="row">
+                    <input type="text" class="input-05">
+                    <input type="text" class="input-06">
+                  </div>
+                  <div class="slider-range-03"></div>
+                </fieldset>
+                <fieldset>
+                  <label>Платежеспособность</label>
+                  <div class="row">
+                    <a href="#" class="btn-status green">Платит</a>
+                    <a href="#" class="btn-status blue">Не платит</a>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <label>Реферальный процент</label>
+                  <div class="row">
+                    <input type="text" class="input-07">
+                    <input type="text" class="input-08">
+                  </div>
+                  <div class="slider-range-04"></div>
+                </fieldset>
+                <a href="#" class="submit">Показать</a>
+              </form>
+            </div>
+          </div>
+
           <ul class="proj-list">
             <li>
               <h3>Eastern Union</h3>

@@ -68,35 +68,7 @@
 
   <!-- BEGIN MAIN -->
   <div id="main">
-    <!-- BEGIN SIDEBAR -->
-    <div id="sidebar">
-      <div class="advantages">
-        <h2>Приемущества</h2>
-        <ul class="advantages">
-          <li>
-            <img src="images/img-advantages-01.png" alt=""/>
-            <h3>Мобильная версия сайта</h3>
-          </li>
-          <li>
-            <img src="images/img-advantages-02.png" alt=""/>
-            <h3>Оповещение на сайт</h3>
-          </li>
-          <li>
-            <img src="images/img-advantages-03.png" alt=""/>
-            <h3>Посты выплат на основных форумах</h3>
-          </li>
-          <li>
-            <img src="images/img-advantages-04.png" alt=""/>
-            <h3>Приложение для ПК</h3>
-            <p>Моментальное оповещение пользователей о появлении новых проектов, выплатах, изменении статусов и о
-              новостях проектов.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- END SIDEBAR -->
-
-     <!-- BEGIN CONTENT -->
+    <!-- BEGIN CONTENT -->
     <div id="content">
       <h2>Наши услуги</h2>
 
@@ -164,8 +136,8 @@
           </div>
 
           <div class="row">
-            <label for="proj-details">Опишите детали проэкта,тарифные планы,ньюансы,примечания и т.д Всё что по вашему мы должны
-              знать о проэкте.</label>
+            <label for="proj-details">Опишите детали проэкта, тарифные планы, ньюансы, примечания и т.д Всё что по
+              вашему мы должны знать о проэкте.</label>
             <textarea name="" id="proj-details"></textarea>
           </div>
 
@@ -177,6 +149,34 @@
       </div>
     </div>
     <!-- END CONTENT -->
+
+    <!-- BEGIN SIDEBAR -->
+    <div id="sidebar">
+      <div class="advantages">
+        <h2>Приемущества</h2>
+        <ul class="advantages-list">
+          <li>
+            <img src="images/img-advantages-01.png" alt=""/>
+            <h3>Мобильная версия сайта</h3>
+          </li>
+          <li>
+            <img src="images/img-advantages-02.png" alt=""/>
+            <h3>Оповещение на сайт</h3>
+          </li>
+          <li>
+            <img src="images/img-advantages-03.png" alt=""/>
+            <h3>Посты выплат на основных форумах</h3>
+          </li>
+          <li>
+            <img src="images/img-advantages-04.png" alt=""/>
+            <h3>Приложение для ПК</h3>
+            <p>Моментальное оповещение пользователей о появлении новых проектов, выплатах, изменении статусов и о
+              новостях проектов.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- END SIDEBAR -->
   </div>
   <!-- END MAIN -->
 
@@ -200,4 +200,97 @@
 </div>
 <!-- END WRAPPER -->
 
+<!-- begin modal -->
+<div class="cd-user-modal">
+  <div class="cd-user-modal-container">
+    <ul class="cd-switcher">
+      <li><a href="#0">Sign in</a></li>
+      <li><a href="#0">New account</a></li>
+    </ul>
+    <!-- log in form -->
+    <div id="cd-login">
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signin-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signin-password">Password</label>
+          <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+          <a href="#0" class="hide-password">Hide</a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input type="checkbox" id="remember-me" checked>
+          <label for="remember-me">Remember me</label>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width" type="submit" value="Login">
+        </p>
+      </form>
+
+      <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+    </div>
+    <!-- cd-login -->
+    <!-- sign up form -->
+    <div id="cd-signup">
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-username" for="signup-username">Username</label>
+          <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signup-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signup-password">Password</label>
+          <input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
+          <a href="#0" class="hide-password">Hide</a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input type="checkbox" id="accept-terms">
+          <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Create account">
+        </p>
+      </form>
+
+    </div>
+    <!-- cd-signup -->
+    <!-- reset password form -->
+    <div id="cd-reset-password">
+      <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="reset-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Reset password">
+        </p>
+      </form>
+
+      <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+    </div>
+    <!-- cd-reset-password -->
+    <a href="#0" class="cd-close-form">Close</a>
+  </div>
+</div>
+<!-- end modal -->
 </body>

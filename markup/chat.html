@@ -11,7 +11,7 @@
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/main.js"></script>
-  <title>CapitalGuide</title>
+  <title>CapitalGuide | Chat</title>
 </head>
 <body>
 <!-- BEGIN WRAPPER -->
@@ -68,43 +68,6 @@
 
   <!-- BEGIN MAIN -->
   <div id="main">
-    <!-- BEGIN SIDEBAR -->
-    <div id="sidebar">
-      <h2 class="no-uppercase">Написать сообщение</h2>
-      <div class="new-message">
-        <textarea>Всем привет! Я новенький в этом чате, как ту все устроено, расскажешь?</textarea>
-        <div class="btn-row">
-          <a href="#" class="attach">прикрепить фото</a>
-          <a href="#" class="send">отправить</a>
-        </div>
-        <ul class="attachemnts">
-          <li>
-            <a href="#">meandmyselfie.jpg</a>
-            <span class="delete">delete</span>
-          </li>
-        </ul>
-      </div>
-      <div class="users-online">
-        <div class="top-bar">
-          <h4>Пользователи онлайн</h4>
-          <span class="quantity">156</span>
-        </div>
-        <ul class="users-list">
-          <li><img src="images/avatars/img-chat-avatar-01.png" alt="user-01"></li>
-          <li><img src="images/avatars/img-chat-avatar-02.png" alt="user-02"></li>
-          <li><img src="images/avatars/img-chat-avatar-03.png" alt="user-03"></li>
-          <li><img src="images/avatars/img-chat-avatar-04.png" alt="user-04"></li>
-          <li><img src="images/avatars/img-chat-avatar-01.png" alt="user-01"></li>
-          <li><img src="images/avatars/img-chat-avatar-02.png" alt="user-02"></li>
-          <li><img src="images/avatars/img-chat-avatar-03.png" alt="user-03"></li>
-          <li><img src="images/avatars/img-chat-avatar-04.png" alt="user-04"></li>
-          <li><img src="images/avatars/img-chat-avatar-01.png" alt="user-01"></li>
-        </ul>
-        <a href="#" class="show-all">Показать всех</a>
-      </div>
-    </div>
-    <!-- END SIDEBAR -->
-
     <!-- BEGIN CONTENT -->
     <div id="content">
       <h2>Чат</h2>
@@ -116,6 +79,12 @@
 
       <!-- begin chat -->
       <div class="chat">
+        <div class="mobile">
+          <div class="users-online">
+            <h4>Пользователи онлайн</h4>
+            <span class="quantity">156</span>
+          </div>
+        </div>
         <div class="message">
           <div class="img-frame">
             <img src="images/avatars/img-chat-avatar-01.png" alt="">
@@ -398,6 +367,45 @@
       <!-- end chat -->
     </div>
     <!-- END CONTENT -->
+
+    <!-- BEGIN SIDEBAR -->
+    <div id="sidebar">
+      <div class="chat-panel">
+        <h2 class="no-uppercase">Написать сообщение</h2>
+        <div class="new-message">
+          <textarea>Всем привет! Я новенький в этом чате, как ту все устроено, расскажешь?</textarea>
+          <div class="btn-row">
+            <a href="#" class="attach">прикрепить фото</a>
+            <a href="#" class="send">отправить</a>
+          </div>
+          <ul class="attachemnts">
+            <li>
+              <a href="#">meandmyselfie.jpg</a>
+              <span class="delete">delete</span>
+            </li>
+          </ul>
+        </div>
+        <div class="users-online">
+          <div class="top-bar">
+            <h4>Пользователи онлайн</h4>
+            <span class="quantity">156</span>
+          </div>
+          <ul class="users-list">
+            <li><img src="images/avatars/img-chat-avatar-01.png" alt="user-01"></li>
+            <li><img src="images/avatars/img-chat-avatar-02.png" alt="user-02"></li>
+            <li><img src="images/avatars/img-chat-avatar-03.png" alt="user-03"></li>
+            <li><img src="images/avatars/img-chat-avatar-04.png" alt="user-04"></li>
+            <li><img src="images/avatars/img-chat-avatar-01.png" alt="user-01"></li>
+            <li><img src="images/avatars/img-chat-avatar-02.png" alt="user-02"></li>
+            <li><img src="images/avatars/img-chat-avatar-03.png" alt="user-03"></li>
+            <li><img src="images/avatars/img-chat-avatar-04.png" alt="user-04"></li>
+            <li><img src="images/avatars/img-chat-avatar-01.png" alt="user-01"></li>
+          </ul>
+          <a href="#" class="show-all">Показать всех</a>
+        </div>
+      </div>
+    </div>
+    <!-- END SIDEBAR -->
   </div>
   <!-- END MAIN -->
 
@@ -421,4 +429,97 @@
 </div>
 <!-- END WRAPPER -->
 
+<!-- begin modal -->
+<div class="cd-user-modal">
+  <div class="cd-user-modal-container">
+    <ul class="cd-switcher">
+      <li><a href="#0">Sign in</a></li>
+      <li><a href="#0">New account</a></li>
+    </ul>
+    <!-- log in form -->
+    <div id="cd-login">
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signin-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signin-password">Password</label>
+          <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+          <a href="#0" class="hide-password">Hide</a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input type="checkbox" id="remember-me" checked>
+          <label for="remember-me">Remember me</label>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width" type="submit" value="Login">
+        </p>
+      </form>
+
+      <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+    </div>
+    <!-- cd-login -->
+    <!-- sign up form -->
+    <div id="cd-signup">
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-username" for="signup-username">Username</label>
+          <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signup-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signup-password">Password</label>
+          <input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
+          <a href="#0" class="hide-password">Hide</a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input type="checkbox" id="accept-terms">
+          <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Create account">
+        </p>
+      </form>
+
+    </div>
+    <!-- cd-signup -->
+    <!-- reset password form -->
+    <div id="cd-reset-password">
+      <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="reset-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Reset password">
+        </p>
+      </form>
+
+      <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+    </div>
+    <!-- cd-reset-password -->
+    <a href="#0" class="cd-close-form">Close</a>
+  </div>
+</div>
+<!-- end modal -->
 </body>

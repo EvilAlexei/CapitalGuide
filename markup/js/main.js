@@ -19,6 +19,11 @@ $(function(){
     $(this).siblings('.dropdown').slideToggle();
   });
 
+  $('.filter-overlay').click(function(){
+    $(this).hide();
+    $('.filter-dropdown .dropdown').slideUp();
+  });
+
   /* filter sliders */
   jqueryUISlider({parent: '#high-value', slider: ".slider-range-01", input01: ".input-01", input02: ".input-02"}, {range: true, min: 0, max: 5000, values: [300, 4600]});
   jqueryUISlider({parent: '#high-value', slider: ".slider-range-02", input01: ".input-03", input02: ".input-04"}, {range: true, min: 0, max: 90, values: [1, 56]});
@@ -68,13 +73,24 @@ $(function(){
 
     $(this).siblings('ul').toggle('slow');
     $(this).parent().toggleClass('active');
-  })
+  });
+
+  /* tabs */
+  $('.tab-menu .mobile').click(function(){
+    var currentTab = this.dataset.tab;
+
+    $('.tab-menu .mobile').removeClass('current');
+    $(this).addClass('current');
+
+    $('.proj-cols > li').hide();
+    $('.' + currentTab).show();
+  });
 
   /* resize */
   $(window).on('resize', function(){
     $('#nav').removeClass('active');
     $('#nav ul').hide();
-  })
+  });
 });
 
 function navHover(options){
