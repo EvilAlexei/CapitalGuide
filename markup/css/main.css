@@ -612,7 +612,7 @@ select {
   width: 100%;
   margin-top: 10px;
   position: relative;
-  z-index: 1;
+  z-index: 100;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1834,6 +1834,7 @@ select {
   padding: 20px 0 40px;
   border-bottom: 1px solid #c4c4c4;
   border-top: 1px solid #ffffff;
+  max-wdth: 560px;
 }
 .chat .message:nth-child(2) {
   border-top: none;
@@ -2007,6 +2008,9 @@ select {
   }
 }
 @media only screen and (max-width: 1023px) {
+  body {
+    min-wdth: 480px;
+  }
   #wrapper {
     width: auto;
     min-width: 480px;
@@ -2284,5 +2288,10 @@ select {
   }
   #footer .holder p {
     line-height: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .chat .message > .holder img {
+    max-wdth: 100%;
   }
 }

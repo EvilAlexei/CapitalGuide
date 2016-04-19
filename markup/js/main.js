@@ -88,9 +88,13 @@ $(function(){
 
   /* resize */
   $(window).on('resize', function(){
-    $('#nav').removeClass('active');
-    $('#nav ul').hide();
-  });
+    if (window.innerWidth <= 1023) {
+      $('#nav').removeClass('active');
+      $('#nav ul').hide();
+    } else {
+      $('#nav ul').show();
+    }
+  })
 });
 
 function navHover(options){
